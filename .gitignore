@@ -26,3 +26,4 @@ dist-ssr
 # VS Code workspace file
 *.code-workspace
 .vscode
+*.bat
