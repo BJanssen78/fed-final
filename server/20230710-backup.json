@@ -1,0 +1,122 @@
+{
+  "users": [
+    {
+      "userID": 1,
+      "userName": "admin",
+      "userPass": "blablabla123@",
+      "userEmail": "admin@server.nl",
+      "userRole": 3
+    },
+    {
+      "userID": 2,
+      "userName": "mod",
+      "userPass": "blablabla123@",
+      "userEmail": "mod@server.nl",
+      "userRole": 2
+    },
+    {
+      "userID": 3,
+      "userName": "user",
+      "userPass": "blablabla123@",
+      "userEmail": "user@server.nl",
+      "userRole": 1
+    },
+    {
+      "userID": 4,
+      "userName": "jenni",
+      "userPass": "blablabla123@",
+      "userEmail": "user@server.nl",
+      "userRole": 1
+    },
+    {
+      "userID": 5,
+      "userName": "geert",
+      "userPass": "blablabla123@",
+      "userEmail": "user@server.nl",
+      "userRole": 1
+    }
+  ],
+  "userRoles": [
+    {
+      "admin": 3,
+      "moderator": 2,
+      "user": 1
+    }
+  ],
+  "catergories": [
+    {
+      "catergoryID": 1,
+      "catergoryName": "sports"
+    },
+    {
+      "catergoryID": 2,
+      "catergoryName": "games"
+    },
+    {
+      "catergoryID": 3,
+      "catergoryName": "music"
+    },
+    {
+      "catergoryID": 4,
+      "catergoryName": "onzin"
+    }
+  ],
+  "events": [
+    {
+      "eventID": 1,
+      "eventName": "eerste test",
+      "eventShortDescr": "eerste imput",
+      "eventLongtDescr": "Hier staat heel veel tekst, die nog niet helemaal bekend is en ook nergens op slaat, gewoon om te testen en om dat het kan.",
+      "eventDate": "12-12-2023",
+      "eventStartTime": "12:00",
+      "eventEndTime": "24:00",
+      "eventLocation": "Nijmegen",
+      "eventCreatedBy": 1,
+      "eventImage": "https://tegelizr.nl/tegeltjes/in-een-wereld-vol-onzin-kan-die-van-jou-er-ook-nog-wel-bij.png",
+      "attendedBy": [1],
+      "catergoriesIds": [4]
+    },
+    {
+      "eventID": 2,
+      "eventName": "cross karten",
+      "eventShortDescr": "party cross",
+      "eventLongtDescr": "crossen in de sahara net als mario karten.",
+      "eventDate": "12-12-2024",
+      "eventStartTime": "12:12",
+      "eventEndTime": " 24:00",
+      "eventLocation": "sahara",
+      "eventCreatedBy": 4,
+      "eventImage": "https://www.racexpress.nl/imgitems/article/2014/03/cross%20buggy%20kart%20RX%20680.jpg",
+      "attendedBy": [],
+      "catergoriesIds": [1, 2]
+    },
+    {
+      "eventID": 3,
+      "eventName": "Funpop",
+      "eventShortDescr": "Muziekfestival voor mensen met een beperking",
+      "eventLongtDescr": "Muziekfestival wat speciaal bedoeld is voor mensen met een handicap, dit kan geestelijk of fysiek zijn. En tevens voor alle mensen die iets met deze doelgroep hebben (familie/verzorgers enz.).",
+      "eventDate": "23-05-2025",
+      "eventStartTime": "11:00",
+      "eventEndTime": " 18:00",
+      "eventLocation": "Speelweide 1 Amsterdam",
+      "eventCreatedBy": 5,
+      "eventImage": "https://www.funpop.nl/uploads/images/e/3/e3b7ba8cc671c20d52c6a71f443767c384b1a9a3/mobileheaderDefault/f780e4/funpop-2022-credits-mara-van-den-oetelaar.jpg",
+      "attendedBy": [1, 2, 3, 4, 5],
+      "catergoriesIds": [3]
+    },
+    {
+      "eventID": 4,
+      "eventName": "Pipo the clown coming to town",
+      "eventShortDescr": "Story about a clown called Pipo",
+      "eventLongtDescr": "Nothing to mention here, as the title is already clear enough",
+      "eventDate": "23-09-2023",
+      "eventStartTime": "11:00",
+      "eventEndTime": " 18:00",
+      "eventLocation": "Speelweide 1 Amsterdam",
+      "eventCreatedBy": 1,
+      "eventImage": "https://images.theconversation.com/files/509759/original/file-20230213-30-yhnme1.jpg?ixlib=rb-1.1.0&rect=49%2C0%2C5499%2C2749&q=45&auto=format&w=1356&h=668&fit=crop",
+      "attendedBy": [1],
+      "catergoriesIds": [4]
+    }
+  ]
+}
