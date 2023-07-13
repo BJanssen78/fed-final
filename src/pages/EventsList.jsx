@@ -28,7 +28,7 @@ export const EventList = () => {
   const resetUserSelectEvent = () => {
     setUserSelectEvent();
   };
-  console.log(serverData.fetchedCatergory);
+  console.log(serverData);
 
   return (
     <>
@@ -41,6 +41,7 @@ export const EventList = () => {
           <EventDetailPage
             eventData={userSelectEvent}
             eventCat={serverData.fetchedCatergory}
+            users={serverData.fetchedUserList}
             reset={resetUserSelectEvent}
           />
         ) : (

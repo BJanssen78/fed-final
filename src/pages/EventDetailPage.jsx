@@ -10,8 +10,11 @@ import {
   Tag,
 } from "@chakra-ui/react";
 
-export const EventDetailPage = ({ eventData, eventCat, reset }) => {
-  console.log(eventCat);
+export const EventDetailPage = ({ eventData, eventCat, users, reset }) => {
+  console.log(users);
+  // console.log(eventData[0].CreatedBy);
+
+  // const createdBy =
 
   return (
     <>
@@ -96,7 +99,11 @@ export const EventDetailPage = ({ eventData, eventCat, reset }) => {
                 <Flex justifyContent={"space-between"}>
                   <Text>
                     Attendees:{" "}
-                    <Tag bg={"#00FF00"}>{eventData[0].attendedBy.length}</Tag>{" "}
+                    <Tag bg={"#00FF00"}>{eventData[0].attendedBy.length}</Tag>
+                  </Text>
+                  <Text>
+                    Event created by:{" "}
+                    <Tag bg={"#00FF00"}>{eventData[0].eventCreatedBy}</Tag>
                   </Text>
                   <Text>
                     Catergory:{" "}
