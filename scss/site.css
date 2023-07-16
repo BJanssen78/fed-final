@@ -39,4 +39,28 @@ nav ul .split {
 .home span {
   color: red;
   text-shadow: 1px 1px 10px #ff0000;
+}
+
+.fase {
+  color: #00ff00;
+  margin: 0 auto;
+}
+.fase h1 {
+  font-size: 2em;
+  font-weight: bold;
+  text-align: center;
+}
+.fase .fase-lijst-container {
+  max-width: 500px;
+  margin: 0 auto;
+}
+.fase .fase-lijst-container .fase-lijst {
+  list-style-type: disc;
+}
+.fase .fase-lijst-container .fase-lijst .sub-fase-lijst {
+  list-style: circle;
+  padding-left: 20px;
+}
+.fase .fase-lijst-container .fase-lijst .task-done {
+  list-style: disc;
 }/*# sourceMappingURL=site.css.map */

@@ -6,6 +6,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import EventList from "./pages/EventsList.jsx";
 import { EventDetailPage } from "./pages/EventDetailPage.jsx";
 import { Home } from "./pages/Home.jsx";
+import { Fase } from "./pages/Fase.jsx";
 
 const router = createBrowserRouter([
   {
@@ -13,6 +14,7 @@ const router = createBrowserRouter([
     element: <App />,
     children: [
       { path: "/", element: <Home /> },
+      { path: "/fase/", element: <Fase /> },
       {
         path: "/events",
         element: <EventList />,
