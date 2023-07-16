@@ -67,9 +67,9 @@ export const EventList = () => {
                         bg={"whiteAlpha.600"}
                         padding={"0"}
                         cursor={"pointer"}
-                        // shadow={"2px 2px white"}
+                        border={"2px solid #00FF00"}
                         _hover={{
-                          shadow: "4px 4px white",
+                          shadow: "4px 4px #00FF00",
                           translate: "0 0 -15px",
                           color: "#00FF00",
                           fontWeight: "bold",
