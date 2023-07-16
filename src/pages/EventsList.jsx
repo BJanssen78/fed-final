@@ -28,7 +28,8 @@ export const EventList = () => {
   const resetUserSelectEvent = () => {
     setUserSelectEvent();
   };
-  console.log(serverData);
+  // console.log(serverData);
+  // console.log(serverData.fetchedUserList);
 
   return (
     <>

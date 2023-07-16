@@ -11,10 +11,18 @@ import {
 } from "@chakra-ui/react";
 
 export const EventDetailPage = ({ eventData, eventCat, users, reset }) => {
-  console.log(users);
-  // console.log(eventData[0].CreatedBy);
+  console.log(eventData);
+  // console.log(users);
+  console.log(eventCat);
 
-  // const createdBy =
+  const createdBy = users.filter(
+    (id) => id.userID === eventData[0].eventCreatedBy
+  );
+
+  const currentCat = eventCat.filter(
+    (catergory) => catergory.catergoryID === eventData[0].catergoriesIds[0]
+  );
+  console.log(currentCat[0].catergoryName);
 
   return (
     <>
@@ -26,10 +34,21 @@ export const EventDetailPage = ({ eventData, eventCat, users, reset }) => {
               minHeight={"25em"}
               bg={"whiteAlpha.500"}
               padding={"0"}
-              cursor={"pointer"}
               shadow={"2px 2px black"}
               borderRadius={"25px"}
             >
+              <Button
+                maxWidth={"100px"}
+                onClick={reset}
+                position={"absolute"}
+                right={"10px"}
+                top={"10px"}
+                margin={"5px"}
+                bg={"#00FF00"}
+                zIndex={"1"}
+              >
+                Back
+              </Button>
               <CardBody
                 padding={"10px"}
                 height={"10em"}
@@ -93,9 +112,7 @@ export const EventDetailPage = ({ eventData, eventCat, users, reset }) => {
                 >
                   {eventData[0].eventLongtDescr}
                 </Tag>
-                <Button maxWidth={"200px"} onClick={reset}>
-                  Back
-                </Button>
+
                 <Flex justifyContent={"space-between"}>
                   <Text>
                     Attendees:{" "}
@@ -103,21 +120,11 @@ export const EventDetailPage = ({ eventData, eventCat, users, reset }) => {
                   </Text>
                   <Text>
                     Event created by:{" "}
-                    <Tag bg={"#00FF00"}>{eventData[0].eventCreatedBy}</Tag>
+                    <Tag bg={"#00FF00"}>{createdBy[0].userName}</Tag>
                   </Text>
                   <Text>
                     Catergory:{" "}
-                    <Tag bg={"#00FF00"}>
-                      {/* {eventCat
-                        .filter(
-                          (catId) =>
-                            catId.catergoryID === eventData[0].catergoriesIds
-                        )
-                        .map(
-                          (filteredCatergory) => filteredCatergory.catergoryID
-                        )}
-                      {filteredCatergory.catergoryName} */}
-                    </Tag>
+                    <Tag bg={"#00FF00"}>{currentCat[0].catergoryName}</Tag>
                   </Text>
                 </Flex>
               </CardBody>
