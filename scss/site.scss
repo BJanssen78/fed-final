@@ -49,17 +49,54 @@ nav {
     font-weight: bold;
     text-align: center;
   }
+  p {
+    text-align: center;
+  }
   .fase-lijst-container {
     max-width: 500px;
     margin: 0 auto;
+    label {
+      display: block;
+      margin: 10px 0;
+      cursor: pointer;
+      padding: 10px;
+      background: rgba(255, 255, 255, 0.35);
+      border-radius: 25px;
+    }
     .fase-lijst {
-      list-style-type: disc;
+      list-style-type: none;
+
+      input[type="checkbox"] {
+        position: absolute;
+        left: -9999px;
+      }
+
+      input[type="checkbox"] ~ ul {
+        height: 0;
+        transform: scaleY(0);
+      }
+
+      input[type="checkbox"]:checked ~ ul {
+        height: 100%;
+        transform-origin: top;
+        transition: transform 0.2s ease-out;
+        transform: scaleY(1);
+      }
+
+      input[type="checkbox"]:checked + label {
+        background: rgba(255, 255, 255, 0.6);
+        border-radius: 25px;
+        font-size: 1.2em;
+      }
       .sub-fase-lijst {
-        list-style: circle;
+        list-style: none;
         padding-left: 20px;
       }
       .task-done {
-        list-style: disc;
+        color: #ff0000;
+        text-shadow: 1px 1px 10px red;
+        font-size: 1.2em;
+        font-weight: bold;
       }
     }
   }

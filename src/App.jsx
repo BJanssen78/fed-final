@@ -5,13 +5,6 @@ import { Outlet } from "react-router-dom";
 
 function App() {
   return (
-    // Fase 1 - connectie met server
-    // Fase 2 - navigatie/router
-    // Fase 3 - User login page and options
-    // Fase 4 - edit page - server update
-    // Fase 5 - new event page - post to server
-    // Fase 6 - errorboundries
-    // Fase 7 - contact form
     <>
       <Tag
         position={"absolute"}

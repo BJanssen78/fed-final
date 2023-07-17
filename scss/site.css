@@ -50,17 +50,50 @@ nav ul .split {
   font-weight: bold;
   text-align: center;
 }
+.fase p {
+  text-align: center;
+}
 .fase .fase-lijst-container {
   max-width: 500px;
   margin: 0 auto;
 }
+.fase .fase-lijst-container label {
+  display: block;
+  margin: 10px 0;
+  cursor: pointer;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.35);
+  border-radius: 25px;
+}
 .fase .fase-lijst-container .fase-lijst {
-  list-style-type: disc;
+  list-style-type: none;
+}
+.fase .fase-lijst-container .fase-lijst input[type=checkbox] {
+  position: absolute;
+  left: -9999px;
+}
+.fase .fase-lijst-container .fase-lijst input[type=checkbox] ~ ul {
+  height: 0;
+  transform: scaleY(0);
+}
+.fase .fase-lijst-container .fase-lijst input[type=checkbox]:checked ~ ul {
+  height: 100%;
+  transform-origin: top;
+  transition: transform 0.2s ease-out;
+  transform: scaleY(1);
+}
+.fase .fase-lijst-container .fase-lijst input[type=checkbox]:checked + label {
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 25px;
+  font-size: 1.2em;
 }
 .fase .fase-lijst-container .fase-lijst .sub-fase-lijst {
-  list-style: circle;
+  list-style: none;
   padding-left: 20px;
 }
 .fase .fase-lijst-container .fase-lijst .task-done {
-  list-style: disc;
+  color: #ff0000;
+  text-shadow: 1px 1px 10px red;
+  font-size: 1.2em;
+  font-weight: bold;
 }/*# sourceMappingURL=site.css.map */
