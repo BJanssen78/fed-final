@@ -4,15 +4,15 @@ export const FetchServer = ({ onDataFetched }) => {
   // Server information
   // const serverURL = "http://localhost:3010";
   const serverURL = "../server/database.json";
-  const pathSlash = "/";
+  // const pathSlash = "/";
   const eventsPath = "events";
   const userPath = "users";
   const catergoryPath = "catergories";
 
   // Local link assembly
-  const localLinkEvent = serverURL + pathSlash + eventsPath;
-  const localLinkUsers = serverURL + pathSlash + userPath;
-  const localLinkCatergory = serverURL + pathSlash + catergoryPath;
+  const localLinkEvent = serverURL + eventsPath;
+  const localLinkUsers = serverURL + userPath;
+  const localLinkCatergory = serverURL + catergoryPath;
 
   const sendHeaders = {
     Accept: "application/json",
