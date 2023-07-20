@@ -3,7 +3,8 @@ import { useEffect } from "react";
 export const FetchServer = ({ onDataFetched }) => {
   // Server information
   // const serverURL = "http://localhost:3010";
-  const serverURL = "../public/database.json";
+  const serverURL = "../database.json";
+  const localServerFile = "../public/";
   const pathSlash = "/";
   const eventsPath = "events";
   const userPath = "users";
@@ -11,8 +12,8 @@ export const FetchServer = ({ onDataFetched }) => {
 
   // Local link assembly
   const localLinkEvent = serverURL;
-  // const localLinkUsers = serverURL + pathSlash + userPath;
-  // const localLinkCatergory = serverURL + pathSlash + catergoryPath;
+  const localLinkUsers = serverURL + pathSlash + userPath;
+  const localLinkCatergory = serverURL + pathSlash + catergoryPath;
 
   const sendHeaders = {
     Accept: "application/json",
@@ -30,21 +31,21 @@ export const FetchServer = ({ onDataFetched }) => {
           method: "GET",
           headers: sendHeaders,
         }),
-        // fetch(localLinkUsers, {
-        //   method: "GET",
-        //   headers: sendHeaders,
-        // }),
-        // fetch(localLinkCatergory, {
-        //   method: "GET",
-        //   headers: sendHeaders,
-        // }),
+        fetch(localLinkUsers, {
+          method: "GET",
+          headers: sendHeaders,
+        }),
+        fetch(localLinkCatergory, {
+          method: "GET",
+          headers: sendHeaders,
+        }),
       ]);
 
       const [eventResponse, usersResponse, categoryResponse] = responses;
 
       const eventList = await eventResponse.json();
-      const userList = await usersResponse.json();
-      const categoryList = await categoryResponse.json();
+      // const userList = await usersResponse.json();
+      // const categoryList = await categoryResponse.json();
 
       //Put all collected data in 1 variable to send onDataFetched
       const fetchedDataFromServer = {
