@@ -3,7 +3,7 @@ import { useEffect } from "react";
 export const FetchServer = ({ onDataFetched }) => {
   // Server information
   // const serverURL = "http://localhost:3010";
-  const serverURL = "../public/server/database.json";
+  const serverURL = "../public/database.json";
   const pathSlash = "/";
   const eventsPath = "events";
   const userPath = "users";
@@ -48,9 +48,9 @@ export const FetchServer = ({ onDataFetched }) => {
 
       //Put all collected data in 1 variable to send onDataFetched
       const fetchedDataFromServer = {
-        fetchedEventList: eventList,
-        fetchedUserList: userList,
-        fetchedCatergory: categoryList,
+        fetchedEventList: eventList.events,
+        // fetchedUserList: userList,
+        // fetchedCatergory: categoryList,
       };
 
       onDataFetched(fetchedDataFromServer);
