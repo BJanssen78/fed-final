@@ -11,8 +11,6 @@ export const FetchServer = ({ onDataFetched }) => {
 
   // Local link assembly
   const localLinkEvent = serverURL;
-  // const localLinkUsers = serverURL + pathSlash + userPath;
-  // const localLinkCatergory = serverURL + pathSlash + catergoryPath;
 
   const sendHeaders = {
     Accept: "application/json",
@@ -30,21 +28,11 @@ export const FetchServer = ({ onDataFetched }) => {
           method: "GET",
           headers: sendHeaders,
         }),
-        // fetch(localLinkUsers, {
-        //   method: "GET",
-        //   headers: sendHeaders,
-        // }),
-        // fetch(localLinkCatergory, {
-        //   method: "GET",
-        //   headers: sendHeaders,
-        // }),
       ]);
 
       const [eventResponse] = responses;
 
       const eventList = await eventResponse.json();
-      // const userList = await usersResponse.json();
-      // const categoryList = await categoryResponse.json();
 
       //Put all collected data in 1 variable to send onDataFetched
       const fetchedDataFromServer = {

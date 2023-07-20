@@ -114,6 +114,38 @@ export const Fase = () => {
                 <li>Indienen van product en code bij de Academy</li>
               </ul>
             </li>
+            <li>
+              <input type="checkbox" id="fase-8" />
+              <label htmlFor="fase-8">
+                Additions <span className="task-done">{checkmark}</span>
+              </label>
+              <ul className="sub-fase-lijst">
+                <li>
+                  Publicatie Netlify{" "}
+                  <span className="task-done">{checkmark}</span>
+                </li>
+                <li>
+                  Setting up realtime connectie{" "}
+                  <span className="task-done">{checkmark}</span>
+                </li>
+                <li>
+                  Setting up automatic site update{" "}
+                  <span className="task-done">{checkmark}</span>
+                </li>
+                <li>
+                  Server connectie verloren en gefikst{" "}
+                  <span className="task-done">{checkmark}</span>
+                </li>
+                <li>
+                  Opmaak foutje gefikst{" "}
+                  <span className="task-done">{checkmark}</span>
+                </li>
+                <li>
+                  Site responsive verbeterd{" "}
+                  <span className="task-done">{checkmark}</span>
+                </li>
+              </ul>
+            </li>
           </ul>
         </div>
       </div>

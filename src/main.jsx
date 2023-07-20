@@ -7,6 +7,7 @@ import EventList from "./pages/EventsList.jsx";
 import { EventDetailPage } from "./pages/EventDetailPage.jsx";
 import { Home } from "./pages/Home.jsx";
 import { Fase } from "./pages/Fase.jsx";
+import { LoginPage } from "./pages/Loginpage.jsx";
 
 const router = createBrowserRouter([
   {
@@ -24,6 +25,10 @@ const router = createBrowserRouter([
             element: <EventDetailPage />,
           },
         ],
+      },
+      {
+        path: "/login",
+        element: <LoginPage />,
       },
     ],
   },

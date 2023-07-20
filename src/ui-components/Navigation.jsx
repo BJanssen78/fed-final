@@ -19,7 +19,7 @@ export const Navigation = () => {
             <Link to="/">contact</Link>
           </li>
           <li className="split">
-            <Link to="/">login</Link>
+            <Link to="/login">login</Link>
           </li>
         </ul>
       </nav>

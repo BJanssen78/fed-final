@@ -90,6 +90,13 @@
       "userPass": "blablabla123@",
       "userEmail": "user@server.nl",
       "userRole": 1
+    },
+    {
+      "userID": 14,
+      "userName": "Dr Willie",
+      "userPass": "blablabla123@",
+      "userEmail": "user@server.nl",
+      "userRole": 1
     }
   ],
   "userRoles": [
@@ -163,6 +170,14 @@
     {
       "catergoryID": 16,
       "catergoryName": "Wandel 4daagse "
+    },
+    {
+      "catergoryID": 17,
+      "catergoryName": "Dance"
+    },
+    {
+      "catergoryID": 18,
+      "catergoryName": "Kids"
     }
   ],
   "events": [
@@ -515,6 +530,48 @@
       "eventImage": "https://donevents.nl/wp-content/uploads/2022/12/bv.jpg",
       "attendedBy": [1, 2, 3, 4, 5, 7, 8, 10, 11, 12, 13],
       "catergoriesIds": []
+    },
+    {
+      "eventID": 26,
+      "eventName": "Punk Fest",
+      "eventShortDescr": "Dance event",
+      "eventLongtDescr": "Dansavond voor mensen met een leeftijd 18 to 90. \r\nMuziek genre zal zijn: alto, 80 en punk\r\n",
+      "eventDate": "2023-07-21",
+      "eventStartTime": "03:18",
+      "eventEndTime": "15:12",
+      "eventLocation": "Arnhem",
+      "eventCreatedBy": 14,
+      "eventImage": "https://www.blackpoolgazette.co.uk/webimg/b25lY21zOmU3ZmExYTNhLWI4ZTctNGZlZi04ZTgwLTEwYWI0NTk5ZDI2ZjpjMjViYWZlMy0wZmEyLTQ0NGMtYjQ0Yy1lNzNjYjAwMmFkZTk=.jpg?width=1200&enable=upscale",
+      "attendedBy": [1, 2, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14],
+      "catergoriesIds": [17]
+    },
+    {
+      "eventID": 27,
+      "eventName": "Jeugdland",
+      "eventShortDescr": "Kinder event",
+      "eventLongtDescr": "Stichting Jeugdland organiseert al sinds 1971 vakantie activiteiten voor kinderen van 4 t/m 12 jaar en heeft een hechte samenwerking met Sportbedrijf Arnhem, Kinderopvang SKAR en Stichting Rijnstad. Stichting Jeugdland integreert en co\u00f6rdineert het activiteitenaanbod van deze afzonderlijke organisaties. Het doel is een gemeenschappelijk aanbod te cre\u00ebren, welke aansluit bij de belevingswereld van kinderen. ",
+      "eventDate": "2023-07-30",
+      "eventStartTime": "18:15",
+      "eventEndTime": "15:21",
+      "eventLocation": "Arnhem",
+      "eventCreatedBy": 14,
+      "eventImage": "https://assets.citynavigator.nl/thumb/i_VHu32oCRyOHMyhD5hCR39-D-mYH3Do-A14gIBzoTo/resizing_type:fit/width:960/height:0/gravity:sm/enlarge:0/aHR0cHM6Ly9hc3NldHMuY2l0eW5hdmlnYXRvci5ubC9vZHAtZmxldm9sYW5kL2ltYWdlL2pldWdkbGFuZC1oYXZlbl8yNjg0NjQ0MzU2LmpwZWc.jpeg",
+      "attendedBy": [3, 8, 11],
+      "catergoriesIds": [18]
+    },
+    {
+      "eventID": 28,
+      "eventName": "Jeugdland",
+      "eventShortDescr": "Kinder event",
+      "eventLongtDescr": "Stichting Jeugdland organiseert al sinds 1971 vakantie activiteiten voor kinderen van 4 t/m 12 jaar en heeft een hechte samenwerking met Sportbedrijf Arnhem, Kinderopvang SKAR en Stichting Rijnstad. Stichting Jeugdland integreert en co\u00f6rdineert het activiteitenaanbod van deze afzonderlijke organisaties. Het doel is een gemeenschappelijk aanbod te cre\u00ebren, welke aansluit bij de belevingswereld van kinderen. ",
+      "eventDate": "2023-07-30",
+      "eventStartTime": "18:15",
+      "eventEndTime": "15:21",
+      "eventLocation": "Amsterdam",
+      "eventCreatedBy": 14,
+      "eventImage": "https://rozenburg-bloeit.nl/wp-content/uploads/2018/09/Jeugdland_2018_01-2400x1800.jpg",
+      "attendedBy": [13, 14],
+      "catergoriesIds": [18]
     }
   ]
 }
