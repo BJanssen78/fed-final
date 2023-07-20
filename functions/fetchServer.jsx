@@ -10,9 +10,9 @@ export const FetchServer = ({ onDataFetched }) => {
   const catergoryPath = "catergories";
 
   // Local link assembly
-  const localLinkEvent = serverURL + pathSlash + eventsPath;
-  const localLinkUsers = serverURL + pathSlash + userPath;
-  const localLinkCatergory = serverURL + pathSlash + catergoryPath;
+  const localLinkEvent = serverURL;
+  // const localLinkUsers = serverURL + pathSlash + userPath;
+  // const localLinkCatergory = serverURL + pathSlash + catergoryPath;
 
   const sendHeaders = {
     Accept: "application/json",
@@ -30,14 +30,14 @@ export const FetchServer = ({ onDataFetched }) => {
           method: "GET",
           headers: sendHeaders,
         }),
-        fetch(localLinkUsers, {
-          method: "GET",
-          headers: sendHeaders,
-        }),
-        fetch(localLinkCatergory, {
-          method: "GET",
-          headers: sendHeaders,
-        }),
+        // fetch(localLinkUsers, {
+        //   method: "GET",
+        //   headers: sendHeaders,
+        // }),
+        // fetch(localLinkCatergory, {
+        //   method: "GET",
+        //   headers: sendHeaders,
+        // }),
       ]);
 
       const [eventResponse, usersResponse, categoryResponse] = responses;
