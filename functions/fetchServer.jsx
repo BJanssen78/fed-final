@@ -44,14 +44,14 @@ export const FetchServer = ({ onDataFetched }) => {
       const [eventResponse, usersResponse, categoryResponse] = responses;
 
       const eventList = await eventResponse.json();
-      // const userList = await usersResponse.json();
-      // const categoryList = await categoryResponse.json();
+      const userList = await usersResponse.json();
+      const categoryList = await categoryResponse.json();
 
       //Put all collected data in 1 variable to send onDataFetched
       const fetchedDataFromServer = {
         fetchedEventList: eventList.events,
-        // fetchedUserList: userList,
-        // fetchedCatergory: categoryList,
+        fetchedUserList: userList,
+        fetchedCatergory: categoryList,
       };
 
       onDataFetched(fetchedDataFromServer);
