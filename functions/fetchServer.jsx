@@ -3,7 +3,7 @@ import { useEffect } from "react";
 export const FetchServer = ({ onDataFetched }) => {
   // Server information
   // const serverURL = "http://localhost:3010";
-  const serverURL = "../server/database.json";
+  const serverURL = "../public/server/database.json";
   const pathSlash = "/";
   const eventsPath = "events";
   const userPath = "users";
