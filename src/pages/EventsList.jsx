@@ -13,6 +13,8 @@ import {
 export const EventList = () => {
   const [serverData, setServerData] = useState(null);
   const [userSelectEvent, setUserSelectEvent] = useState();
+  const [userLoggedIn, setUserLoggedIn] = useState(false);
+  const [userIdLoggedIn, setUserIdLoggedIn] = useState(0);
 
   const fetchServerData = (data) => {
     setServerData(data);

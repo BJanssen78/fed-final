@@ -98,6 +98,13 @@
     padding: 10px;
     padding-bottom: 20px;
     margin: 0 auto;
+    #login-form {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 25px;
+    }
     .login-item {
       padding: 5px 10px;
       border-radius: 15px;
