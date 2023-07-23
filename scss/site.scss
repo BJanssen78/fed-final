@@ -1,4 +1,5 @@
 @import "variables.scss";
+@import "mixins.scss";
 .home {
   color: $font-clr;
   margin: 0 auto;
@@ -77,6 +78,10 @@
     }
   }
 }
+
+.logoff-btn {
+  @include log-btn;
+}
 .login-body {
   width: 100%;
   height: 75vh;
@@ -124,22 +129,8 @@
       justify-content: center;
       align-items: center;
       height: 60px;
-      .login-btn {
-        background-color: $bg-clr;
-        box-shadow: 0 4px $font-clr;
-        padding: 5px;
-        border-radius: 15px;
-        width: 100px;
-        max-height: 40px;
-        &:hover {
-          background-color: $bg-clr-hvr;
-          border: 1px solid $font-clr;
-        }
-        &:active {
-          transform: translateY(4px);
-          box-shadow: 0 1px $font-clr;
-        }
-      }
+
+      @include log-btn;
     }
   }
 }

@@ -14,10 +14,17 @@ export const EventList = () => {
   const [serverData, setServerData] = useState(null);
   const [userSelectEvent, setUserSelectEvent] = useState();
   const [userLoggedIn, setUserLoggedIn] = useState(false);
+  const [username, setUserName] = useState(null);
   const [userIdLoggedIn, setUserIdLoggedIn] = useState(0);
 
   const fetchServerData = (data) => {
     setServerData(data);
+  };
+
+  const userData = (username, userId) => {
+    setUserLoggedIn(true);
+    setUserName(username);
+    setUserIdLoggedIn(userId);
   };
 
   const userSelect = (eventID) => {

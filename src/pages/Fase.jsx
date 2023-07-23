@@ -1,9 +1,14 @@
 import React from "react";
 // import ReactDOM from "react-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCheck } from "@fortawesome/free-solid-svg-icons";
+import {
+  faCheck,
+  faHelmetSafety,
+  faWrench,
+} from "@fortawesome/free-solid-svg-icons";
 
 const checkmark = <FontAwesomeIcon icon={faCheck} />;
+const workingOn = <FontAwesomeIcon icon={faHelmetSafety} />;
 
 export const Fase = () => {
   return (
@@ -68,9 +73,16 @@ export const Fase = () => {
             </li>
             <li>
               <input type="checkbox" id="fase-3" />
-              <label htmlFor="fase-3">Fase 3 (1/4)</label>
+              <label htmlFor="fase-3">Fase 3 (2/5)</label>
               <ul className="sub-fase-lijst">
-                <li>Creëren user login pagina</li>
+                <li>
+                  Creëren user login pagina{" "}
+                  <span className="task-done">{workingOn} working</span>
+                </li>
+                <li>
+                  check username and password return results{" "}
+                  <span className="task-done">{checkmark}</span>
+                </li>
                 <li>Creëren van een create new user formulier</li>
                 <li>
                   Aanmaken van user roles{" "}
