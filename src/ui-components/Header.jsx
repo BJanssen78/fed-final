@@ -1,6 +1,8 @@
-import { Heading } from "@chakra-ui/react";
+import { Heading, Tag } from "@chakra-ui/react";
 
-export const Header = () => {
+export const Header = ({ username }) => {
+  const firstLetterCapitalized = username.charAt(0).toUpperCase();
+
   return (
     <>
       <Heading
@@ -14,6 +16,23 @@ export const Header = () => {
       >
         Winc Academy Events
       </Heading>
+      <Tag
+        boxSizing={"border-box"}
+        padding={"0"}
+        bg={"#00FF00"}
+        width={"40px"}
+        height={"40px"}
+        justifyContent={"center"}
+        alignItems={"flex-end"}
+        border={"2px solid white"}
+        borderRadius={"50%"}
+        fontSize={"2em"}
+        position={"absolute"}
+        top={"5"}
+        right={"5"}
+      >
+        {firstLetterCapitalized}
+      </Tag>
     </>
   );
 };

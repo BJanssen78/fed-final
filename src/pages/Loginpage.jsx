@@ -22,12 +22,22 @@ export const LoginPage = () => {
 
     if (loggedInUser) {
       if (password === loggedInUser.userPass) {
+        const loginStateUserName = loggedInUser.userName;
+        const loginStateUserId = loggedInUser.userID;
         setUserLoggedIn(true);
         // Update userIdLoggedIn with the user ID of the logged-in user
         setUserIdLoggedIn(loggedInUser.userID);
         console.log("User logged in:", username);
         console.log("User ID:", loggedInUser.userID);
         console.log("password matches");
+
+        sessionStorage.setItem(
+          "loginState",
+          JSON.stringify({
+            username: loginStateUserName,
+            userID: loginStateUserId,
+          })
+        );
 
         history(-1);
       } else {
