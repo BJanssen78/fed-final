@@ -145,9 +145,7 @@ export const EventList = () => {
                     </React.Fragment>
                   ))
               ) : (
-                <Text color={"#00FF00"}>
-                  <p>No events found</p>
-                </Text>
+                <Text color={"#00FF00"}>No events found</Text>
               )}
             </Stack>
           </Flex>

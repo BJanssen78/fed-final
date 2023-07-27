@@ -1,7 +1,18 @@
+import React from "react";
+import { useEffect, useState } from "react";
 import { Heading, Tag } from "@chakra-ui/react";
 
 export const Header = ({ username }) => {
-  const firstLetterCapitalized = username.charAt(0).toUpperCase();
+  const [firstLetterCapitalized, setFirstLetterCapitalized] = useState("");
+  // const firstLetterCapitalized = username.charAt(0).toUpperCase();
+
+  useEffect(() => {
+    // This will run whenever the `username` prop changes
+    console.log("Header component received a new username:", username);
+    if (username) {
+      setFirstLetterCapitalized(username.charAt(0).toUpperCase());
+    }
+  }, [username]);
 
   return (
     <>
@@ -16,23 +27,25 @@ export const Header = ({ username }) => {
       >
         Winc Academy Events
       </Heading>
-      <Tag
-        boxSizing={"border-box"}
-        padding={"0"}
-        bg={"#00FF00"}
-        width={"40px"}
-        height={"40px"}
-        justifyContent={"center"}
-        alignItems={"flex-end"}
-        border={"2px solid white"}
-        borderRadius={"50%"}
-        fontSize={"2em"}
-        position={"absolute"}
-        top={"5"}
-        right={"5"}
-      >
-        {firstLetterCapitalized}
-      </Tag>
+      {firstLetterCapitalized ? (
+        <Tag
+          boxSizing={"border-box"}
+          padding={"0"}
+          bg={"#00FF00"}
+          width={"40px"}
+          height={"40px"}
+          justifyContent={"center"}
+          alignItems={"flex-end"}
+          border={"2px solid white"}
+          borderRadius={"50%"}
+          fontSize={"2em"}
+          position={"absolute"}
+          top={"5"}
+          right={"5"}
+        >
+          {firstLetterCapitalized}
+        </Tag>
+      ) : null}
     </>
   );
 };

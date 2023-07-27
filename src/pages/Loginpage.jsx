@@ -1,10 +1,12 @@
 import React from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { FetchServer } from "../../functions/fetchServer";
 import { useNavigate } from "react-router-dom";
+import { useAuth } from "../../functions/AuthContext";
 
-export const LoginPage = () => {
+export const LoginPage = ({ onLogoff }) => {
   const [serverData, setServerData] = useState(null);
+  // const [userLoggedIn, handleLogoff] = useAuth();
   const fetchServerData = (data) => {
     setServerData(data);
   };
@@ -12,7 +14,8 @@ export const LoginPage = () => {
 
   const [userLoggedIn, setUserLoggedIn] = useState(false);
   const [userIdLoggedIn, setUserIdLoggedIn] = useState(0);
-  // console.log(serverData.fetchedUserList);
+  const [userNameLoggedIn, setUserNameLoggedIn] = useState("");
+  const [loginErrorMsg, setLoginErrorMsg] = useState("");
 
   const loginCheck = async (username, password) => {
     const loggedInUser = serverData.fetchedUserList.find((user) => {
@@ -45,8 +48,19 @@ export const LoginPage = () => {
       }
     } else {
       console.log("Invalid credentials");
+      setLoginErrorMsg("Invalid credentials");
     }
   };
+
+  useEffect(() => {
+    const loginState = sessionStorage.getItem("loginState");
+    if (loginState) {
+      const { username, userID } = JSON.parse(loginState);
+      setUserLoggedIn(true);
+      setUserIdLoggedIn(userID);
+      setUserNameLoggedIn(username);
+    }
+  }, []);
 
   return (
     <React.Fragment>
@@ -61,14 +75,21 @@ export const LoginPage = () => {
                 <button
                   onClick={(e) => {
                     e.preventDefault();
-                    setUserLoggedIn(false);
-                    setUserIdLoggedIn(0);
+                    handleLogoff();
                   }}
                   className="login-btn"
                 >
                   yes
                 </button>
-                <button type="reset" form="login-form" className="login-btn">
+                <button
+                  onClick={(e) => {
+                    e.preventDefault();
+                    history(-1);
+                  }}
+                  type="reset"
+                  form="login-form"
+                  className="login-btn"
+                >
                   cancel
                 </button>
               </div>

@@ -8,6 +8,7 @@ import { EventDetailPage } from "./pages/EventDetailPage.jsx";
 import { Home } from "./pages/Home.jsx";
 import { Fase } from "./pages/Fase.jsx";
 import { LoginPage } from "./pages/Loginpage.jsx";
+import { AuthProvider } from "../functions/AuthContext.jsx";
 
 const router = createBrowserRouter([
   {
@@ -47,7 +48,9 @@ const theme = extendTheme({
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <ChakraProvider theme={theme}>
-      <RouterProvider router={router} />
+      <AuthProvider>
+        <RouterProvider router={router} />
+      </AuthProvider>
     </ChakraProvider>
   </React.StrictMode>
 );
