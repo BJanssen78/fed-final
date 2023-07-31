@@ -1,11 +1,6 @@
 import React from "react";
-// import ReactDOM from "react-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faCheck,
-  faHelmetSafety,
-  faWrench,
-} from "@fortawesome/free-solid-svg-icons";
+import { faCheck, faHelmetSafety } from "@fortawesome/free-solid-svg-icons";
 
 const checkmark = <FontAwesomeIcon icon={faCheck} />;
 const workingOn = <FontAwesomeIcon icon={faHelmetSafety} />;
@@ -73,22 +68,30 @@ export const Fase = () => {
             </li>
             <li>
               <input type="checkbox" id="fase-3" />
-              <label htmlFor="fase-3">Fase 3 (2/5)</label>
+              <label htmlFor="fase-3">Fase 3 (5/6)</label>
               <ul className="sub-fase-lijst">
                 <li>
                   Creëren user login pagina{" "}
-                  <span className="task-done">{workingOn} working</span>
+                  <span className="task-done">{checkmark}</span>
                 </li>
                 <li>
                   check username and password return results{" "}
                   <span className="task-done">{checkmark}</span>
                 </li>
-                <li>Creëren van een create new user formulier</li>
+                <li>
+                  Creëren van een create new user formulier{" "}
+                  <span className="task-done">{checkmark}</span>
+                </li>
+                <li>
+                  Creëren user logoff pagina{" "}
+                  <span className="task-done">{checkmark}</span>
+                </li>
                 <li>
                   Aanmaken van user roles{" "}
                   <span className="task-done">{checkmark}</span>
                 </li>
-                <li>Testen user roles</li>
+                <li>Testen user roles</li>{" "}
+                <span className="task-done">{workingOn} working</span>
               </ul>
             </li>
             <li>
@@ -156,6 +159,10 @@ export const Fase = () => {
                   Site responsive verbeterd{" "}
                   <span className="task-done">{checkmark}</span>
                 </li>
+                <li>
+                  Added dark / light mode{" "}
+                  <span className="task-done">{checkmark}</span>
+                </li>
               </ul>
             </li>
           </ul>
@@ -164,3 +171,4 @@ export const Fase = () => {
     </React.Fragment>
   );
 };
+export default Fase;

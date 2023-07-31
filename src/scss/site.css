@@ -1,5 +1,4 @@
 .home {
-  color: #00ff00;
   margin: 0 auto;
   text-align: center;
   font-size: 1.2em;
@@ -14,12 +13,11 @@
 }
 .home span {
   color: red;
-  text-shadow: 1px 1px 10px #ff0000;
 }
 
 .fase {
-  color: #00ff00;
   margin: 0 auto;
+  padding: 20px;
 }
 .fase h1 {
   font-size: 2em;
@@ -160,7 +158,6 @@
 @media only screen and (max-width: 402px) {
   nav {
     background-color: rgba(255, 255, 255, 0.35);
-    color: #00ff00;
     margin: 10px 0;
     padding: 10px;
     position: sticky;
@@ -190,7 +187,6 @@
 @media only screen and (min-width: 403px) {
   nav {
     background-color: rgba(255, 255, 255, 0.35);
-    color: #00ff00;
     margin: 10px 0;
     padding: 10px;
     position: sticky;
@@ -220,7 +216,6 @@
 @media only screen and (min-width: 520px) {
   nav {
     background-color: rgba(255, 255, 255, 0.35);
-    color: #00ff00;
     margin: 10px 0;
     padding: 10px;
     position: sticky;

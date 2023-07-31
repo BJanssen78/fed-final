@@ -1,7 +1,6 @@
 @import "variables.scss";
 @import "mixins.scss";
 .home {
-  color: $font-clr;
   margin: 0 auto;
   text-align: center;
   font-size: 1.2em;
@@ -15,12 +14,12 @@
   }
   span {
     color: red;
-    text-shadow: 1px 1px 10px #ff0000;
   }
 }
 .fase {
-  color: $font-clr;
   margin: 0 auto;
+  padding: 20px;
+
   h1 {
     font-size: 2em;
     font-weight: bold;
@@ -138,7 +137,6 @@
 @media only screen and (max-width: 402px) {
   nav {
     background-color: $bg-clr;
-    color: $font-clr;
     margin: 10px 0;
     padding: 10px;
     position: sticky;
@@ -169,7 +167,6 @@
 @media only screen and (min-width: 403px) {
   nav {
     background-color: $bg-clr;
-    color: $font-clr;
     margin: 10px 0;
     padding: 10px;
     position: sticky;
@@ -200,7 +197,6 @@
 @media only screen and (min-width: 520px) {
   nav {
     background-color: $bg-clr;
-    color: $font-clr;
     margin: 10px 0;
     padding: 10px;
     position: sticky;

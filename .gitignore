@@ -22,8 +22,3 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
-
-# VS Code workspace file
-*.code-workspace
-.vscode
-*.bat

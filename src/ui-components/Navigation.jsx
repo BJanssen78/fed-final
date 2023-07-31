@@ -1,10 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { useAuth } from "../../functions/AuthContext";
-import { LoginPage } from "../pages/Loginpage";
 
-export const Navigation = ({ login, onLogoff }) => {
-  const { userLoggedIn, handleLogoff } = useAuth();
+export const Navigation = ({ loginStatus }) => {
   return (
     <React.Fragment>
       <nav>
@@ -22,10 +19,8 @@ export const Navigation = ({ login, onLogoff }) => {
             <Link to="/">contact</Link>
           </li>
           <li className="split">
-            {login ? (
-              <Link to="/login" onLogoff={handleLogoff}>
-                Logoff
-              </Link>
+            {loginStatus ? (
+              <Link to="/logoff">Logoff</Link>
             ) : (
               <Link to="/login">Login</Link>
             )}
@@ -35,3 +30,4 @@ export const Navigation = ({ login, onLogoff }) => {
     </React.Fragment>
   );
 };
+export default Navigation;

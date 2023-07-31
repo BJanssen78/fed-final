@@ -3,14 +3,7 @@ import { useEffect } from "react";
 export const FetchServer = ({ onDataFetched }) => {
   // Server information
   // const serverURL = "http://localhost:3010";
-  const serverURL = "../database.json";
-  const pathSlash = "/";
-  const eventsPath = "events";
-  const userPath = "users";
-  const catergoryPath = "catergories";
-
-  // Local link assembly
-  const localLinkEvent = serverURL;
+  const serverURL = "../src/database/database.json";
 
   const sendHeaders = {
     Accept: "application/json",
@@ -24,7 +17,7 @@ export const FetchServer = ({ onDataFetched }) => {
   const fetchDataFromServer = async function () {
     try {
       const responses = await Promise.all([
-        fetch(localLinkEvent, {
+        fetch(serverURL, {
           method: "GET",
           headers: sendHeaders,
         }),

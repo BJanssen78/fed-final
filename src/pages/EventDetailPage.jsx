@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useContext } from "react";
+import AuthContext from "../functions/AuthContext";
 import {
   Button,
   Card,
@@ -11,9 +12,11 @@ import {
 } from "@chakra-ui/react";
 
 export const EventDetailPage = ({ eventData, eventCat, users, reset }) => {
-  console.log(eventData);
+  const { loginStatus, loginUserId } = useContext(AuthContext);
+
+  console.log(loginStatus);
   // console.log(users);
-  console.log(eventCat);
+  console.log(loginUserId);
 
   const createdBy = users.filter(
     (id) => id.userID === eventData[0].eventCreatedBy
@@ -97,9 +100,11 @@ export const EventDetailPage = ({ eventData, eventCat, users, reset }) => {
                 <Text fontWeight={"bold"}>
                   Location:{" "}
                   <Tag bg={"#00FF00"}>{eventData[0].eventLocation}</Tag> When:{" "}
-                  <Tag bg={"#00FF00"}>{eventData[0].eventDate}</Tag> From:{" "}
-                  <Tag bg={"#00FF00"}>{eventData[0].eventStartTime}</Tag> Till :{" "}
-                  <Tag bg={"#00FF00"}>{eventData[0].eventEndTime}</Tag>
+                  <Tag bg={"#00FF00"}>
+                    {eventData[0].eventDate.split("-").reverse().join("-")}
+                  </Tag>{" "}
+                  From: <Tag bg={"#00FF00"}>{eventData[0].eventStartTime}</Tag>{" "}
+                  Till : <Tag bg={"#00FF00"}>{eventData[0].eventEndTime}</Tag>
                 </Text>
 
                 <Text fontWeight={"bold"}>Description/Agenda/Line-up:</Text>
@@ -135,3 +140,4 @@ export const EventDetailPage = ({ eventData, eventCat, users, reset }) => {
     </>
   );
 };
+export default EventDetailPage;
