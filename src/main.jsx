@@ -2,7 +2,13 @@ import React, { useState } from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import App from "./App.jsx";
-import { ChakraProvider, extendTheme, Switch, VStack } from "@chakra-ui/react";
+import {
+  ChakraProvider,
+  extendTheme,
+  Switch,
+  VStack,
+  Tag,
+} from "@chakra-ui/react";
 import { Home, EventList, Fase, EventDetailPage } from "./pages/PageIndex.js";
 import { LoginPage } from "./pages/LoginPage.jsx";
 import { AuthProvider } from "./functions/AuthContext.jsx";
@@ -90,6 +96,9 @@ const Main = () => {
         </VStack>
         <AuthProvider>
           <RouterProvider router={router} />
+          <Tag position={"absolute"} bottom={"0px"} right={"5px"} zIndex={"2"}>
+            Version 2
+          </Tag>
         </AuthProvider>
       </ChakraProvider>
     </React.StrictMode>

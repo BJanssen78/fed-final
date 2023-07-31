@@ -17,14 +17,8 @@ function App() {
   return (
     <>
       <FetchServer onDataFetched={fetchServerData} />
-      <Tag
-        position={"absolute"}
-        margin={"5px"}
-        zIndex={"2"}
-        bgColor={"whiteAlpha.500"}
-        // color={"#00FF00"}
-      >
-        Front-end Development Final ( Fase 2/7 completed )
+      <Tag position={"absolute"} margin={"5px"} zIndex={"2"}>
+        Front-end Development Final ( Fase 2/8 completed )
       </Tag>
       <Header loginUserName={loginUserName} />
       <Navigation loginStatus={loginStatus} />
