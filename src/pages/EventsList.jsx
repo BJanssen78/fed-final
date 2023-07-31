@@ -18,9 +18,9 @@ export const EventList = () => {
     setServerData(data);
   };
 
-  const userSelect = (eventID) => {
+  const userSelect = (id) => {
     const selectEvent = serverData.fetchedEventList.filter(
-      (event) => event.eventID === eventID
+      (event) => event.id === id
     );
     setUserSelectEvent(selectEvent);
   };
@@ -60,7 +60,7 @@ export const EventList = () => {
                     return dateA - dateB;
                   })
                   .map((item) => (
-                    <React.Fragment key={item.eventID}>
+                    <React.Fragment key={item.id}>
                       <Card
                         width={"60vw"}
                         height={"10em"}
@@ -74,7 +74,7 @@ export const EventList = () => {
                           color: "#00FF00",
                           fontWeight: "bold",
                         }}
-                        onClick={() => userSelect(item.eventID)}
+                        onClick={() => userSelect(item.id)}
                       >
                         <Flex>
                           <CardBody

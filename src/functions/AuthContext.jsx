@@ -61,21 +61,22 @@ export const AuthProvider = ({ children }) => {
     if (loggedInUser) {
       if (password === loggedInUser.userPass) {
         const loginStateUserName = loggedInUser.userName;
-        const loginStateUserId = loggedInUser.userID;
+        const loginStateUserId = loggedInUser.id;
         const loginStateUserRole = loggedInUser.userRole;
         setLoginStatus(true);
-        setLoginUserId(loggedInUser.userID);
-        setLoginUserName(loggedInUser.userName);
-        setLoginUserRole(loggedInUser.userRole);
-        console.log("User logged in:", username);
-        console.log("User ID:", loggedInUser.userID);
+        setLoginUserId(loginStateUserId);
+        setLoginUserName(loginStateUserName);
+        setLoginUserRole(loginStateUserRole);
+        console.log("User logged in:", loginStateUserName);
+        console.log("User ID:", loginStateUserId);
+        console.log(loginStateUserRole);
         console.log("password matches");
 
         sessionStorage.setItem(
           "loginState",
           JSON.stringify({
             username: loginStateUserName,
-            userID: loginStateUserId,
+            id: loginStateUserId,
             userRole: loginStateUserRole,
           })
         );
