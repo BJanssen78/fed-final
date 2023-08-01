@@ -46,7 +46,7 @@ export const AuthProvider = ({ children }) => {
         fetchedCatergory: eventList.catergories,
       };
       setServerData(fetchedDataFromServer);
-      console.log(fetchedDataFromServer);
+      // console.log(fetchedDataFromServer);
     } catch (error) {
       console.error("Error:", error);
       throw error; // Throw the error if needed

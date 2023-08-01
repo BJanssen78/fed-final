@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import AuthContext from "../functions/AuthContext";
 import {
   Button,
@@ -13,10 +13,23 @@ import {
 
 export const EventDetailPage = ({ eventData, eventCat, users, reset }) => {
   const { loginStatus, loginUserId, loginUserRole } = useContext(AuthContext);
+  const [editMode, setEditMode] = useState(false);
 
   console.log(loginStatus);
   console.log(loginUserId);
   console.log(loginUserRole);
+
+  const handleEditMode = () => {
+    if (loginStatus) {
+      if (loginUserRole >= 1 && users.id === loginUserId) {
+        setEditMode(true);
+      } else {
+        console.log("You are not authorized to edit this page");
+      }
+    } else {
+      console.log("userrole to low");
+    }
+  };
 
   const createdBy = users.filter((id) => id.id === eventData[0].eventCreatedBy);
 
@@ -27,6 +40,9 @@ export const EventDetailPage = ({ eventData, eventCat, users, reset }) => {
   return loginStatus ? (
     <Flex flexDir={"column"} justifyContent={"center"} alignItems={"center"}>
       <Stack>
+        <Button maxWidth={"100px"} bgColor={"#00FF00"} onClick={handleEditMode}>
+          edit
+        </Button>
         <React.Fragment key={eventData[0].id}>
           <Card
             width={"80vw"}

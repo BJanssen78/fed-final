@@ -125,6 +125,13 @@
       "userPass": "blabla",
       "userEmail": "user@server.nl",
       "userRole": 1
+    },
+    {
+      "id": 19,
+      "userName": "niels",
+      "userPass": "blabla",
+      "userEmail": "user@server.nl",
+      "userRole": 1
     }
   ],
   "userRoles": [
@@ -600,6 +607,20 @@
       "eventImage": "https://rozenburg-bloeit.nl/wp-content/uploads/2018/09/Jeugdland_2018_01-2400x1800.jpg",
       "attendedBy": [13, 14],
       "catergoriesIds": [18]
+    },
+    {
+      "id": 29,
+      "eventName": "Zomerparkfeesten Venlo",
+      "eventShortDescr": "ZPF2023",
+      "eventLongtDescr": "\u00c9\u00e9n van de grootste gratis festivals van Nederland, 4 dagen lang in het Julianapark in Venlo. Met meer dan 100 grote en kleinere acts op gebied van muziek, literatuur, dans, theater, film, kunst en wetenschap. 17/18/19/20 AUGUSTUS 2023",
+      "eventDate": "2023-08-17",
+      "eventStartTime": "13:00",
+      "eventEndTime": "02:00",
+      "eventLocation": "Venlo",
+      "eventCreatedBy": 15,
+      "eventImage": "https://www.zin.nl/app/uploads/2016/08/Zomerparkfeest-Venlo-header-768x313.jpg",
+      "attendedBy": [13],
+      "catergoriesIds": [3]
     }
   ]
 }

@@ -96,9 +96,6 @@ const Main = () => {
         </VStack>
         <AuthProvider>
           <RouterProvider router={router} />
-          <Tag position={"absolute"} bottom={"0px"} right={"5px"} zIndex={"2"}>
-            Version 2
-          </Tag>
         </AuthProvider>
       </ChakraProvider>
     </React.StrictMode>
