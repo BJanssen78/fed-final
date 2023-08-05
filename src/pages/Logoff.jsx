@@ -41,3 +41,4 @@ export const Logoff = () => {
     </React.Fragment>
   );
 };
+export default Logoff;

@@ -4,7 +4,7 @@ import { AuthContext } from "../functions/AuthContext";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 
-const LoginPage = () => {
+export const LoginPage = () => {
   const { handleLogin } = useContext(AuthContext);
   const navigateBack = useNavigate();
 
@@ -65,4 +65,4 @@ const LoginPage = () => {
     </React.Fragment>
   );
 };
-export default LoginPage;
+// export default LoginPage;
