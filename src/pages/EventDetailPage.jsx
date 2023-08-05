@@ -1,4 +1,5 @@
 import React, { useContext, useState } from "react";
+import { useParams } from "react-router";
 import AuthContext from "../functions/AuthContext";
 import {
   Button,
@@ -13,6 +14,7 @@ import {
 
 export const EventDetailPage = ({ eventData, eventCat, users, reset }) => {
   const { loginStatus, loginUserId, loginUserRole } = useContext(AuthContext);
+  const { id } = useParams();
   const [editMode, setEditMode] = useState(false);
 
   console.log(loginStatus);
