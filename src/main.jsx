@@ -3,11 +3,16 @@ import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import App from "./App.jsx";
 import { ChakraProvider, extendTheme, Switch, VStack } from "@chakra-ui/react";
-import { Home, EventList, Fase, EventDetailPage } from "./pages/PageIndex.js";
-import { LoginPage } from "./pages/LoginPage.jsx";
+import {
+  Home,
+  EventList,
+  Fase,
+  EventDetailPage,
+  LoginPage,
+  CreateNewUser,
+  Logoff,
+} from "./pages/PageIndex.js";
 import { AuthProvider } from "./functions/AuthContext.jsx";
-import { Logoff } from "./pages/Logoff.jsx";
-import { CreateNewUser } from "./pages/CreateNewUser.jsx";
 
 const darkTheme = extendTheme({
   styles: {
