@@ -8,6 +8,8 @@ import {
   Flex,
   Text,
   Stack,
+  Button,
+  Link,
 } from "@chakra-ui/react";
 
 export const EventList = () => {
@@ -33,6 +35,13 @@ export const EventList = () => {
     <>
       <div className="container">
         <FetchServer onDataFetched={fetchServerData} />
+
+        <Link to="/create-new-user">
+          <Button maxWidth={"100px"} bgColor={"#00FF00"}>
+            New Event
+          </Button>
+        </Link>
+
         {userSelectEvent > 0 ||
         (userSelectEvent !== null &&
           userSelectEvent !== undefined &&

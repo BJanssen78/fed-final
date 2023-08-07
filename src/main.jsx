@@ -11,6 +11,7 @@ import {
   LoginPage,
   CreateNewUser,
   Logoff,
+  CreateNewEvent,
 } from "./pages/PageIndex.js";
 import { AuthProvider } from "./functions/AuthContext.jsx";
 
@@ -60,6 +61,10 @@ const router = createBrowserRouter([
           {
             path: "/events/:eventID",
             element: <EventDetailPage />,
+          },
+          {
+            path: "/events/create-new-event",
+            element: <CreateNewEvent />,
           },
         ],
       },
