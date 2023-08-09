@@ -16,3 +16,20 @@
     }
   }
 }
+@mixin event-btn {
+  background-color: $bg-clr;
+  box-shadow: 0 4px $font-clr;
+  padding: 5px;
+  border-radius: 15px;
+  width: 100px;
+  max-height: 40px;
+  margin: 10px;
+  &:hover {
+    background-color: $bg-clr-hvr;
+    border: 1px solid $font-clr;
+  }
+  &:active {
+    transform: translateY(4px);
+    box-shadow: 0 1px $font-clr;
+  }
+}

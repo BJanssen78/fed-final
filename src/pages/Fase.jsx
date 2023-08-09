@@ -104,7 +104,7 @@ export const Fase = () => {
               <ul className="sub-fase-lijst">
                 <li>
                   Creëren formulier new events{" "}
-                  <span className="task-done">{workingOn} working</span>
+                  <span className="task-done">{workingOn} working</span> 81%
                 </li>
                 <li>
                   Creëren formulier edit events{" "}

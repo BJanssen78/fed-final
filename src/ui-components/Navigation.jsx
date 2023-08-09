@@ -18,6 +18,9 @@ export const Navigation = ({ loginStatus }) => {
           <li>
             <Link to="/">contact</Link>
           </li>
+          <li>
+            <Link to="/events/createNewEvent">New event</Link>
+          </li>
           <li className="split">
             {loginStatus ? (
               <Link to="/logoff">Logoff</Link>

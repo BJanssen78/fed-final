@@ -223,3 +223,42 @@
     }
   }
 }
+.user-link {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  letter-spacing: 2px;
+}
+
+.new-event-form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  width: 75%;
+  border: 2px solid #00ff00;
+
+  .form-create-new-event {
+    margin: 0 auto;
+    min-height: 50vh;
+    width: 80%;
+
+    input {
+      margin: 15px;
+      padding: 5px 5px 5px 10px;
+
+      border-radius: 15px;
+    }
+    #event-short {
+      width: 30vw;
+    }
+    textarea {
+      width: 45vw;
+      min-height: 15vh;
+    }
+    .create-event-btn {
+      @include event-btn;
+    }
+  }
+}

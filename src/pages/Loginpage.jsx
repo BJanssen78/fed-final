@@ -59,7 +59,9 @@ export const LoginPage = () => {
               </button>
             </div>
           </form>
-          <Link to="/CreateNewUser">Create new account</Link>
+          <Link className="user-link" to="/CreateNewUser">
+            Create new account
+          </Link>
         </div>
       </div>
     </React.Fragment>
