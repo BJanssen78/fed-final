@@ -67,10 +67,10 @@ export const AuthProvider = ({ children }) => {
         setLoginUserId(loginStateUserId);
         setLoginUserName(loginStateUserName);
         setLoginUserRole(loginStateUserRole);
-        console.log("User logged in:", loginStateUserName);
-        console.log("User ID:", loginStateUserId);
-        console.log(loginStateUserRole);
-        console.log("password matches");
+        // console.log("User logged in:", loginStateUserName);
+        // console.log("User ID:", loginStateUserId);
+        // console.log(loginStateUserRole);
+        // console.log("password matches");
 
         sessionStorage.setItem(
           "loginState",
