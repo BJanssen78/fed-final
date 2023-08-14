@@ -243,12 +243,8 @@
       "eventLocation": "Nijmegen",
       "eventCreatedBy": 1,
       "eventImage": "https://tegelizr.nl/tegeltjes/in-een-wereld-vol-onzin-kan-die-van-jou-er-ook-nog-wel-bij.png",
-      "attendedBy": [
-        1
-      ],
-      "catergoriesIds": [
-        4
-      ]
+      "attendedBy": [1],
+      "catergoriesIds": [4]
     },
     {
       "id": 2,
@@ -261,13 +257,8 @@
       "eventLocation": "sahara",
       "eventCreatedBy": 4,
       "eventImage": "https://www.racexpress.nl/imgitems/article/2014/03/cross%20buggy%20kart%20RX%20680.jpg",
-      "attendedBy": [
-        4
-      ],
-      "catergoriesIds": [
-        1,
-        2
-      ]
+      "attendedBy": [4],
+      "catergoriesIds": [1, 2]
     },
     {
       "id": 3,
@@ -280,16 +271,8 @@
       "eventLocation": "Speelweide 1 Amsterdam",
       "eventCreatedBy": 5,
       "eventImage": "https://www.funpop.nl/uploads/images/e/3/e3b7ba8cc671c20d52c6a71f443767c384b1a9a3/mobileheaderDefault/f780e4/funpop-2022-credits-mara-van-den-oetelaar.jpg",
-      "attendedBy": [
-        1,
-        2,
-        3,
-        4,
-        5
-      ],
-      "catergoriesIds": [
-        3
-      ]
+      "attendedBy": [1, 2, 3, 4, 5],
+      "catergoriesIds": [3]
     },
     {
       "id": 4,
@@ -302,12 +285,8 @@
       "eventLocation": "Speelweide 1 Amsterdam",
       "eventCreatedBy": 1,
       "eventImage": "https://images.theconversation.com/files/509759/original/file-20230213-30-yhnme1.jpg?ixlib=rb-1.1.0&rect=49%2C0%2C5499%2C2749&q=45&auto=format&w=1356&h=668&fit=crop",
-      "attendedBy": [
-        1
-      ],
-      "catergoriesIds": [
-        5
-      ]
+      "attendedBy": [1],
+      "catergoriesIds": [5]
     },
     {
       "id": 5,
@@ -320,12 +299,8 @@
       "eventLocation": "Utrecht",
       "eventCreatedBy": 6,
       "eventImage": "https://www.simplilearn.com/ice9/free_resources_article_thumb/Top_10_HR_Concepts_And_Terms.jpg",
-      "attendedBy": [
-        6
-      ],
-      "catergoriesIds": [
-        5
-      ]
+      "attendedBy": [6],
+      "catergoriesIds": [5]
     },
     {
       "id": 6,
@@ -338,13 +313,8 @@
       "eventLocation": "Groot terrein",
       "eventCreatedBy": 7,
       "eventImage": "https://img.noordhollandsdagblad.nl/L8rYOt_-_wMRRR86bv3do5A_W6g=/960x640/smart/https%3A%2F%2Fcdn-kiosk-api.telegraaf.nl%2Fd414c19c-ad3b-11e7-a072-0f1c727e3aad.JPG",
-      "attendedBy": [
-        7
-      ],
-      "catergoriesIds": [
-        6,
-        7
-      ]
+      "attendedBy": [7],
+      "catergoriesIds": [6, 7]
     },
     {
       "id": 7,
@@ -357,19 +327,8 @@
       "eventLocation": "Nijmegen",
       "eventCreatedBy": 8,
       "eventImage": "https://www.chalmers.se/_next/image/?url=https%3A%2F%2Fcms.www.chalmers.se%2FMedia%2Fmb3hi4kn%2Fcoding-7-1920.jpg%3Fwidth%3D1920%26height%3D1080%26rnd%3D133293116108230000%26quality%3D60%26format%3Dwebp&w=3840&q=85",
-      "attendedBy": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8
-      ],
-      "catergoriesIds": [
-        8
-      ]
+      "attendedBy": [1, 2, 3, 4, 5, 6, 7, 8],
+      "catergoriesIds": [8]
     },
     {
       "id": 8,
@@ -382,14 +341,8 @@
       "eventLocation": "No where",
       "eventCreatedBy": 8,
       "eventImage": "https://www.addictioncenter.com/app/uploads/2020/01/online_shopping_addiction-scaled.jpeg",
-      "attendedBy": [
-        1,
-        7,
-        8
-      ],
-      "catergoriesIds": [
-        2
-      ]
+      "attendedBy": [1, 7, 8],
+      "catergoriesIds": [2]
     },
     {
       "id": 9,
@@ -402,18 +355,8 @@
       "eventLocation": "Apeldoorn",
       "eventCreatedBy": 9,
       "eventImage": "https://wildlife.forestry.ubc.ca/files/2018/03/big-cats-4s.jpg",
-      "attendedBy": [
-        1,
-        4,
-        5,
-        6,
-        7,
-        8,
-        9
-      ],
-      "catergoriesIds": [
-        9
-      ]
+      "attendedBy": [1, 4, 5, 6, 7, 8, 9],
+      "catergoriesIds": [9]
     },
     {
       "id": 10,
@@ -426,20 +369,8 @@
       "eventLocation": "No where",
       "eventCreatedBy": 10,
       "eventImage": "https://wildlife.forestry.ubc.ca/files/2018/03/big-cats-4s.jpg",
-      "attendedBy": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        7,
-        8,
-        9,
-        10
-      ],
-      "catergoriesIds": [
-        9
-      ]
+      "attendedBy": [1, 2, 3, 4, 5, 7, 8, 9, 10],
+      "catergoriesIds": [9]
     },
     {
       "id": 11,
@@ -452,14 +383,8 @@
       "eventLocation": "Wijk ",
       "eventCreatedBy": 11,
       "eventImage": "https://www.kleinzwitserlanddriebergen.nl/wp-content/uploads/2020/10/KZ-SPEURTOCHT-1000x666px-okt-2020.jpg",
-      "attendedBy": [
-        1,
-        8,
-        10
-      ],
-      "catergoriesIds": [
-        10
-      ]
+      "attendedBy": [1, 8, 10],
+      "catergoriesIds": [10]
     },
     {
       "id": 12,
@@ -472,19 +397,8 @@
       "eventLocation": "Heldro plein Ottersum ",
       "eventCreatedBy": 12,
       "eventImage": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxISEhUSEhIVFRURFRgYGBcWGBUWFRYZGBUWFhkXFRgYHiggGBolHhUXIjMhJSkrLi4uGB8zOjMtNygtLisBCgoKDg0OGxAQGy8mICUtLy0zLy4tLS0vMjMtMC0yLS8tLy0vLS0vMjItLy8tLTctLy0vLTUtLS0vMC0tLS0tLf/AABEIAOEA4QMBIgACEQEDEQH/xAAcAAEAAwADAQEAAAAAAAAAAAAABAUGAQMHAgj/xABHEAABAwIEAwQHBQQGCgMAAAABAAIRAwQFEiExBkFREyJhcQcyQlKBkaEUI2KxwTNy0eEVFoKSssJDRFNjc5PE0vDxJCY0/8QAGQEBAAMBAQAAAAAAAAAAAAAAAAEDBAIF/8QANhEAAgECBAMGBAUDBQAAAAAAAAECAxEEITFBElFhE3GBkaHwBTKxwRQiouHxUpLSI0JictH/2gAMAwEAAhEDEQA/APT0REAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAERRsRvm0WydSZgczGp+A3JRuyuSk5OyJKKHh98KktOj2Ehw8jEjqJEKYoTTV0JJxdmERFJAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAERRb++FOBBe+poxjfXefDoOrjoFDaSuzqEJTfDFXZziF82i3M6SXGGMEZnu91s/mdAASYAWQfdOquY9xBNes2myJyhgdnquZO7IaWA85c72gBJqWr7u47DtMzo+/fT9SjTnWhRPU7OduT4ArusbelXxQMpt+6sab2NAOgLYYSPi6PILFUrcby0PVo4N04tvVRcn0W39z0vrHPSxEv6zqdesWGHUHCroJPZVGjMcvtZXh5I5tc4bwRpsJxNtdvIPaAXNBkQRIcw+1TduHfOCCBT8Uhlrf29YghlRhpv19nOZPwDgfgo1/h32Ku1oqGnTeSber6zaRLpdRqdaRPLlII2KQq8DdyXg3Vpwa1cbx8MpLvXzWWzduRr0UKwvsxNOo3s6zRq2ZBHv0/eYevzU1bU1JXR5U4ShLhkrP3Z9z1XNZhERScBERAEREAREQBERAEREAREQBER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8xLRl35brWYzwzUdhdrTdVptqUiXBr3taHZ5JY1xMZhmHhuhJqcF9JNnc1W0YqU3PIa01A3K4nQCWkwTylWb+J7cXosS1/aubIMDJ6hfEzMw08l5tcYs+jUonEsOpQ0jK9sBzYIJLcriDGhy6KzruH9YaZn2NPH/AOO9AbarxRbsvW2JD+1eJBgZPUc+CZnZh5KRhWP29zUq0abvvLd5a9rhB0MZm9WzzXn+JH/7DRj3f+nrLK3davTxC4rW856FWo8x7gfldI9pveEjpryQHtOPY9b2YYazjNV4a1rRLnEkCQOgnU/qQrgL87Yne3FxXpXNxP3zx2fJuVr26MHJuu/PVfoQOIZI3hCDtyBcrAYRjONurU217Ok2mXAVCHMlreZEVST8lvwgOC0LkBEQBERAEREAREQBERAFwWhcogOCFhOK/R6y5qmvSqGjVO5AlpI2cRIId4ghbxEB5/wz6OWUKor1qhrVGmRIytB94gkkkeJVxxxwr9vpMp9oafZvzSG5p7rmxEj3votQiAjWltkpNZvlaG/IQs3wrwh9juK9btS/7QSYygZZe528mfW+i1qIDzziP0euuLqpcsuHUzUy6BurcrGs0cHA7N+qk2XBFRtnXtn3L39uQQ5wJyRGwLj06hbpEBhqvADHWLLR1Ql1MlzamUSCXFx7s7Q4iJX1ccCirZU7WtVL3UCezqBoaWjYNiTIjT4DotuiA80w70YntGuubl9ZrCIYQQIHIkud3dNhCtuL+Bm3b21qdR1Ks0AZwJkAyJAIMiTBBC2qIDDcJcBi1qmvVqurVSCA5wIAncwSSTGkk7KTgvBYoXla6NQu7bOMmUANzva/edfVj4rYIgMdxXwULupQe2p2YoToGggglpjcR6v1WvY3SF9IgOMo6LlEQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQH/9k=",
-      "attendedBy": [
-        2,
-        3,
-        4,
-        5,
-        7,
-        8,
-        10,
-        11
-      ],
-      "catergoriesIds": [
-        11
-      ]
+      "attendedBy": [2, 3, 4, 5, 7, 8, 10, 11],
+      "catergoriesIds": [11]
     },
     {
       "id": 13,
@@ -497,14 +411,8 @@
       "eventLocation": "Tov Ottersum ",
       "eventCreatedBy": 12,
       "eventImage": "https://images.frieschdagblad.nl/frd/incoming/mcv41y-202202011260.jpg/alternates/LANDSCAPE_1280/202202011260.jpg",
-      "attendedBy": [
-        4,
-        7,
-        10
-      ],
-      "catergoriesIds": [
-        12
-      ]
+      "attendedBy": [4, 7, 10],
+      "catergoriesIds": [12]
     },
     {
       "id": 14,
@@ -517,12 +425,8 @@
       "eventLocation": "Ottersum ",
       "eventCreatedBy": 12,
       "eventImage": "https://cdn.outsideonline.com/wp-content/uploads/2021/06/15/camping_fun_h.jpg",
-      "attendedBy": [
-        9
-      ],
-      "catergoriesIds": [
-        13
-      ]
+      "attendedBy": [9],
+      "catergoriesIds": [13]
     },
     {
       "id": 15,
@@ -535,19 +439,8 @@
       "eventLocation": "Ottersum ",
       "eventCreatedBy": 12,
       "eventImage": "https://fb0f34691e.clvaw-cdnwnd.com/0aa1fd576d9bcf9ad2603a31e336f3fc/200000199-ccf5eccf62/5576891f-2b5b-11e8-abcc-02b7b76bf47f.jpg?ph=fb0f34691e",
-      "attendedBy": [
-        2,
-        3,
-        6,
-        7,
-        8,
-        10,
-        11,
-        12
-      ],
-      "catergoriesIds": [
-        14
-      ]
+      "attendedBy": [2, 3, 6, 7, 8, 10, 11, 12],
+      "catergoriesIds": [14]
     },
     {
       "id": 16,
@@ -560,24 +453,8 @@
       "eventLocation": "Cultureel centrum",
       "eventCreatedBy": 13,
       "eventImage": "https://www.assets.avrotros.nl/user_upload/_processed_/d/b/csm_rossig%20jongetje%20v2_01b04111d5.png",
-      "attendedBy": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        9,
-        10,
-        11,
-        12,
-        13
-      ],
-      "catergoriesIds": [
-        15
-      ]
+      "attendedBy": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13],
+      "catergoriesIds": [15]
     },
     {
       "id": 17,
@@ -590,12 +467,7 @@
       "eventLocation": "Ottersum",
       "eventCreatedBy": 12,
       "eventImage": "https://storage.pubble.nl/648e3015/content/2023/4/86bfcdf7-0a28-48fb-9310-0ee5fbd910ea_thumb1920.jpg",
-      "attendedBy": [
-        1,
-        3,
-        5,
-        11
-      ],
+      "attendedBy": [1, 3, 5, 11],
       "catergoriesIds": []
     },
     {
@@ -609,20 +481,7 @@
       "eventLocation": "Ottersum",
       "eventCreatedBy": 12,
       "eventImage": "https://storage.pubble.nl/648e3015/content/2023/4/86bfcdf7-0a28-48fb-9310-0ee5fbd910ea_thumb1920.jpg",
-      "attendedBy": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        10,
-        11,
-        12,
-        13
-      ],
+      "attendedBy": [1, 2, 3, 4, 5, 6, 7, 8, 10, 11, 12, 13],
       "catergoriesIds": []
     },
     {
@@ -636,10 +495,7 @@
       "eventLocation": "Ottersum",
       "eventCreatedBy": 12,
       "eventImage": "https://d3bazh7fq2ycwy.cloudfront.net/eyJrZXkiOiJhcnRpY2xlc1wvNGFkNWRlYjVmODE3MWNjNmNlMmMyYWEzNjU1NzJiNWQuanBnIiwiZWRpdHMiOnsicm90YXRlIjpudWxsLCJyZXNpemUiOnsiZml0IjoiY292ZXIiLCJ3aWR0aCI6MTIwMCwiaGVpZ2h0IjoxMjAwLCJiYWNrZ3JvdW5kIjp7InIiOjAsImciOjAsImIiOjAsImFscGhhIjowfSwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfX0sImJ1Y2tldCI6Im1pam50dWluIn0=",
-      "attendedBy": [
-        7,
-        10
-      ],
+      "attendedBy": [7, 10],
       "catergoriesIds": []
     },
     {
@@ -653,16 +509,7 @@
       "eventLocation": "Ottersum",
       "eventCreatedBy": 12,
       "eventImage": "https://images.prismic.io/rbbe/b7b0057a50dd56ce9eeff5708879ce5d9c111298_depositphotos_81847962_l-2015.jpg?auto=compress,format",
-      "attendedBy": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        7,
-        9,
-        10
-      ],
+      "attendedBy": [1, 2, 3, 4, 5, 7, 9, 10],
       "catergoriesIds": []
     },
     {
@@ -676,15 +523,7 @@
       "eventLocation": "Club huis",
       "eventCreatedBy": 12,
       "eventImage": "https://vv-rijsoord.nl/wp-content/uploads/2017/11/Sint-en-piet-voetbal.jpg",
-      "attendedBy": [
-        1,
-        2,
-        4,
-        5,
-        7,
-        10,
-        13
-      ],
+      "attendedBy": [1, 2, 4, 5, 7, 10, 13],
       "catergoriesIds": []
     },
     {
@@ -698,16 +537,8 @@
       "eventLocation": "Ottersum",
       "eventCreatedBy": 12,
       "eventImage": "https://static.ah.nl/binaries/ah/content/gallery/ah-nl/ah-nl-core/articles/inspiratie/how-to/paaseieren-schilderen/blog_paaseieren_schilderen_benodigdheden_schilderen_paaseieren.png/blog_paaseieren_schilderen_benodigdheden_schilderen_paaseieren.png/ahonline%3AxlArticle",
-      "attendedBy": [
-        6,
-        7,
-        11,
-        12,
-        13
-      ],
-      "catergoriesIds": [
-        2
-      ]
+      "attendedBy": [6, 7, 11, 12, 13],
+      "catergoriesIds": [2]
     },
     {
       "id": 23,
@@ -720,15 +551,8 @@
       "eventLocation": "Club huis",
       "eventCreatedBy": 12,
       "eventImage": "https://www.dos37.nl/wp-content/uploads/dos37/bingo-1.png",
-      "attendedBy": [
-        6,
-        8,
-        11,
-        13
-      ],
-      "catergoriesIds": [
-        2
-      ]
+      "attendedBy": [6, 8, 11, 13],
+      "catergoriesIds": [2]
     },
     {
       "id": 24,
@@ -741,15 +565,8 @@
       "eventLocation": "Nijmegen",
       "eventCreatedBy": 12,
       "eventImage": "https://www.wandel.nl/media/k22n0xut/header-via-vierdaagse-2.jpg?anchor=center&mode=crop&width=1280&height=640&rnd=132814513886300000&quality=90&format=jpg",
-      "attendedBy": [
-        1,
-        6,
-        7,
-        12
-      ],
-      "catergoriesIds": [
-        16
-      ]
+      "attendedBy": [1, 6, 7, 12],
+      "catergoriesIds": [16]
     },
     {
       "id": 25,
@@ -762,19 +579,7 @@
       "eventLocation": "Milsbeek",
       "eventCreatedBy": 12,
       "eventImage": "https://donevents.nl/wp-content/uploads/2022/12/bv.jpg",
-      "attendedBy": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        7,
-        8,
-        10,
-        11,
-        12,
-        13
-      ],
+      "attendedBy": [1, 2, 3, 4, 5, 7, 8, 10, 11, 12, 13],
       "catergoriesIds": []
     },
     {
@@ -788,24 +593,8 @@
       "eventLocation": "Arnhem",
       "eventCreatedBy": 14,
       "eventImage": "https://www.blackpoolgazette.co.uk/webimg/b25lY21zOmU3ZmExYTNhLWI4ZTctNGZlZi04ZTgwLTEwYWI0NTk5ZDI2ZjpjMjViYWZlMy0wZmEyLTQ0NGMtYjQ0Yy1lNzNjYjAwMmFkZTk=.jpg?width=1200&enable=upscale",
-      "attendedBy": [
-        1,
-        2,
-        4,
-        5,
-        6,
-        7,
-        8,
-        9,
-        10,
-        11,
-        12,
-        13,
-        14
-      ],
-      "catergoriesIds": [
-        17
-      ]
+      "attendedBy": [1, 2, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14],
+      "catergoriesIds": [17]
     },
     {
       "id": 27,
@@ -818,14 +607,8 @@
       "eventLocation": "Arnhem",
       "eventCreatedBy": 14,
       "eventImage": "https://assets.citynavigator.nl/thumb/i_VHu32oCRyOHMyhD5hCR39-D-mYH3Do-A14gIBzoTo/resizing_type:fit/width:960/height:0/gravity:sm/enlarge:0/aHR0cHM6Ly9hc3NldHMuY2l0eW5hdmlnYXRvci5ubC9vZHAtZmxldm9sYW5kL2ltYWdlL2pldWdkbGFuZC1oYXZlbl8yNjg0NjQ0MzU2LmpwZWc.jpeg",
-      "attendedBy": [
-        3,
-        8,
-        11
-      ],
-      "catergoriesIds": [
-        18
-      ]
+      "attendedBy": [3, 8, 11],
+      "catergoriesIds": [18]
     },
     {
       "id": 28,
@@ -838,13 +621,8 @@
       "eventLocation": "Amsterdam",
       "eventCreatedBy": 14,
       "eventImage": "https://rozenburg-bloeit.nl/wp-content/uploads/2018/09/Jeugdland_2018_01-2400x1800.jpg",
-      "attendedBy": [
-        13,
-        14
-      ],
-      "catergoriesIds": [
-        18
-      ]
+      "attendedBy": [13, 14],
+      "catergoriesIds": [18]
     },
     {
       "id": 29,
@@ -857,30 +635,22 @@
       "eventLocation": "Venlo",
       "eventCreatedBy": 15,
       "eventImage": "https://www.zin.nl/app/uploads/2016/08/Zomerparkfeest-Venlo-header-768x313.jpg",
-      "attendedBy": [
-        13
-      ],
-      "catergoriesIds": [
-        3
-      ]
+      "attendedBy": [13],
+      "catergoriesIds": [3]
     },
     {
       "id": 30,
       "eventName": "version test",
       "eventShortDescr": "testing this version",
       "eventLongtDescr": "fdyhdjkd",
-      "eventDate": "2023-09-12",
+      "eventDate": "2023-08-16",
       "eventStartTime": "14:12",
       "eventEndTime": "15:12",
       "eventLocation": "thuis",
       "eventCreatedBy": 8,
       "eventImage": "https://placehold.co/200x500?text=No\nPicture+availble",
-      "attendedBy": [
-        8
-      ],
-      "catergoriesIds": [
-        19
-      ]
+      "attendedBy": [8],
+      "catergoriesIds": [19]
     },
     {
       "id": 31,
@@ -893,12 +663,8 @@
       "eventLocation": "thuis",
       "eventCreatedBy": 8,
       "eventImage": "https://placehold.co/600x700?text=No\nPicture+availble",
-      "attendedBy": [
-        8
-      ],
-      "catergoriesIds": [
-        19
-      ]
+      "attendedBy": [8],
+      "catergoriesIds": [19]
     },
     {
       "id": 32,
@@ -911,9 +677,7 @@
       "eventLocation": "thuis",
       "eventCreatedBy": 8,
       "eventImage": "https://placehold.co/600x700?text=No\nPicture+availble",
-      "attendedBy": [
-        8
-      ],
+      "attendedBy": [8],
       "catergoriesIds": 19
     }
   ]

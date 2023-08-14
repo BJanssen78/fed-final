@@ -8,21 +8,32 @@ import {
   Flex,
   Text,
   Stack,
+  Switch,
+  extendTheme,
 } from "@chakra-ui/react";
 
 export const EventList = () => {
+  const theme = extendTheme({
+    colors: {
+      brand: {
+        50: "#FF0000",
+        100: "#00FF00",
+      },
+    },
+  });
   const [serverData, setServerData] = useState(null);
   const [userSelectEvent, setUserSelectEvent] = useState();
-  // const { eventID } = useParams();
+  const [showAllEvents, setShowAllEvents] = useState(false); // New state for the switch button
 
   const fetchServerData = (data) => {
     setServerData(data);
   };
 
   const userSelect = (id) => {
-    const selectEvent = serverData.fetchedEventList.filter(
+    const selectEvent = serverData.fetchedEventList.find(
       (event) => event.id === id
     );
+    console.log(selectEvent);
     setUserSelectEvent(selectEvent);
   };
 
@@ -30,15 +41,39 @@ export const EventList = () => {
     setUserSelectEvent();
   };
 
+  const toggleShowAllEvents = () => {
+    setShowAllEvents(!showAllEvents);
+  };
+
+  const filteredEventList = serverData
+    ? showAllEvents
+      ? serverData.fetchedEventList
+      : serverData.fetchedEventList.filter((event) => {
+          const eventDate = new Date(event.eventDate.split("-").join("-"));
+          const today = new Date();
+          return eventDate >= today;
+        })
+    : [];
+
   return (
     <>
       <div className="container">
         <FetchServer onDataFetched={fetchServerData} />
 
-        {userSelectEvent > 0 ||
-        (userSelectEvent !== null &&
-          userSelectEvent !== undefined &&
-          userSelectEvent !== "") ? (
+        {/* Switch button */}
+        <Switch
+          marginLeft={"10px"}
+          colorScheme={showAllEvents ? "brand" : "brand.100"}
+          isChecked={showAllEvents}
+          onChange={toggleShowAllEvents}
+          display={"flex"}
+          flexDirection={"row"}
+          alignItems={"center"}
+        >
+          {showAllEvents ? "new events only" : "show older events"}
+        </Switch>
+
+        {userSelectEvent ? (
           <EventDetailPage
             eventData={userSelectEvent}
             eventCat={serverData.fetchedCatergory}
@@ -52,13 +87,9 @@ export const EventList = () => {
             alignItems={"center"}
           >
             <Stack spacing={"25px"}>
-              {serverData && serverData.fetchedEventList.length > 0 ? (
-                [...serverData.fetchedEventList]
-                  .sort((a, b) => {
-                    const dateA = new Date(a.eventDate.split("-").join("-"));
-                    const dateB = new Date(b.eventDate.split("-").join("-"));
-                    return dateA - dateB;
-                  })
+              {filteredEventList.length > 0 ? (
+                filteredEventList
+                  .sort((a, b) => new Date(a.eventDate) - new Date(b.eventDate))
                   .map((item) => (
                     <React.Fragment key={item.id}>
                       <Card

@@ -15,20 +15,16 @@ import {
 
 export const EventDetailPage = ({ eventData, eventCat, users, reset }) => {
   const { loginStatus, loginUserId, loginUserRole } = useContext(AuthContext);
-  // const { id } = useParams();
+  console.log(eventData.eventLocation);
   const [editMode, setEditMode] = useState(false);
-  const [editedLocation, setEditedLocation] = useState(
-    eventData[0].eventLocation
-  );
-  const [editedWhen, setEditedWhen] = useState(eventData[0].eventDate);
+  const [editedLocation, setEditedLocation] = useState(eventData.eventLocation);
+  const [editedWhen, setEditedWhen] = useState(eventData.eventDate);
   const [editedTimeFrom, setEditedTimeFrom] = useState(
-    eventData[0].eventStartTime
+    eventData.eventStartTime
   );
-  const [editedTimeTill, setEditedTimeTill] = useState(
-    eventData[0].eventEndTime
-  );
+  const [editedTimeTill, setEditedTimeTill] = useState(eventData.eventEndTime);
   const [editedLongDesc, setEditedLongDesc] = useState(
-    eventData[0].eventLongtDescr
+    eventData.eventLongtDescr
   );
 
   useEffect(() => {}, [editMode]);
@@ -74,6 +70,8 @@ export const EventDetailPage = ({ eventData, eventCat, users, reset }) => {
     setEditMode(false);
   };
 
+  const deleteEvent = () => {};
+
   const handleEditMode = () => {
     if (loginStatus) {
       if (loginUserRole >= 1 && createdById === loginUserId) {
@@ -86,12 +84,12 @@ export const EventDetailPage = ({ eventData, eventCat, users, reset }) => {
     }
   };
 
-  const createdBy = users.filter((id) => id.id === eventData[0].eventCreatedBy);
+  const createdBy = users.filter((id) => id.id === eventData.eventCreatedBy);
   console.log(createdBy);
   const createdById = createdBy[0].id;
   // console.log(createdBy[0].id);
   const currentCat = eventCat.filter(
-    (catergory) => catergory.id === eventData[0].catergoriesIds[0]
+    (catergory) => catergory.id === eventData.catergoriesIds[0]
   );
 
   return loginStatus && loginUserId === createdById ? (
@@ -108,8 +106,11 @@ export const EventDetailPage = ({ eventData, eventCat, users, reset }) => {
           <Button maxWidth={"100px"} bgColor={"#00FF00"} onClick={saveEdit}>
             Save
           </Button>
+          <Button maxWidth={"100px"} bgColor={"#00FF00"} onClick={deleteEvent}>
+            Delete
+          </Button>
         </HStack>
-        <React.Fragment key={eventData[0].id}>
+        <React.Fragment key={eventData.id}>
           <Card
             width={"80vw"}
             minHeight={"25em"}
@@ -155,7 +156,7 @@ export const EventDetailPage = ({ eventData, eventCat, users, reset }) => {
                   fontWeight={"bold"}
                   textAlign={"center"}
                 >
-                  {eventData[0].eventName}
+                  {eventData.eventName}
                 </CardHeader>
               </Tag>
 
@@ -166,7 +167,7 @@ export const EventDetailPage = ({ eventData, eventCat, users, reset }) => {
                   left: 0,
                   width: "100%",
                   height: "100%",
-                  backgroundImage: `url(${eventData[0].eventImage})`,
+                  backgroundImage: `url(${eventData.eventImage})`,
                   backgroundRepeat: "no-repeat",
                   backgroundPosition: "center",
                   borderRadius: "25px",
@@ -184,11 +185,11 @@ export const EventDetailPage = ({ eventData, eventCat, users, reset }) => {
                       id="edit-location"
                       name="location"
                       onChange={(e) => setEditedLocation(e.target.value)}
-                      placeholder={eventData[0].eventLocation}
+                      placeholder={eventData.eventLocation}
                     />
                   </Tag>
                 ) : (
-                  <Tag bg={"#00FF00"}>{eventData[0].eventLocation}</Tag>
+                  <Tag bg={"#00FF00"}>{eventData.eventLocation}</Tag>
                 )}{" "}
                 When:{" "}
                 {editMode ? (
@@ -198,12 +199,12 @@ export const EventDetailPage = ({ eventData, eventCat, users, reset }) => {
                       id="date-when"
                       name="date-when"
                       onChange={(e) => setEditedWhen(e.target.value)}
-                      defaultValue={eventData[0].eventDate}
+                      defaultValue={eventData.eventDate}
                     />
                   </Tag>
                 ) : (
                   <Tag bg={"#00FF00"}>
-                    {eventData[0].eventDate.split("-").reverse().join("-")}
+                    {eventData.eventDate.split("-").reverse().join("-")}
                   </Tag>
                 )}{" "}
                 From:{" "}
@@ -213,14 +214,14 @@ export const EventDetailPage = ({ eventData, eventCat, users, reset }) => {
                       type="time"
                       id="time-from"
                       name="time-from"
-                      defaultValue={eventData[0].eventStartTime}
+                      defaultValue={eventData.eventStartTime}
                       onChange={(e) => setEditedTimeFrom(e.target.value)}
-                      placeholder={eventData[0].eventStartTime}
+                      placeholder={eventData.eventStartTime}
                     />
                   </Tag>
                 ) : (
                   <Tag bg={"#00FF00"}>
-                    <Tag bg={"#00FF00"}>{eventData[0].eventStartTime}</Tag>
+                    <Tag bg={"#00FF00"}>{eventData.eventStartTime}</Tag>
                   </Tag>
                 )}{" "}
                 Till :{" "}
@@ -230,14 +231,14 @@ export const EventDetailPage = ({ eventData, eventCat, users, reset }) => {
                       type="time"
                       id="time-till"
                       name="time-till"
-                      defaultValue={eventData[0].eventEndTime}
+                      defaultValue={eventData.eventEndTime}
                       onChange={(e) => setEditedTimeTill(e.target.value)}
-                      placeholder={eventData[0].eventEndTime}
+                      placeholder={eventData.eventEndTime}
                     />
                   </Tag>
                 ) : (
                   <Tag bg={"#00FF00"}>
-                    <Tag bg={"#00FF00"}>{eventData[0].eventEndTime}</Tag>
+                    <Tag bg={"#00FF00"}>{eventData.eventEndTime}</Tag>
                   </Tag>
                 )}
               </Text>
@@ -249,7 +250,7 @@ export const EventDetailPage = ({ eventData, eventCat, users, reset }) => {
                   name="long-discription"
                   wrap="soft"
                   onChange={(e) => setEditedLongDesc(e.target.value)}
-                  placeholder={eventData[0].eventLongtDescr}
+                  placeholder={eventData.eventLongtDescr}
                 ></textarea>
               ) : (
                 <Tag
@@ -259,22 +260,22 @@ export const EventDetailPage = ({ eventData, eventCat, users, reset }) => {
                   width={"75%"}
                   bg={"whiteAlpha.600"}
                 >
-                  {eventData[0].eventLongtDescr}
+                  {eventData.eventLongtDescr}
                 </Tag>
               )}
 
               <Flex justifyContent={"space-between"}>
                 <Text>
                   Attendees:{" "}
-                  <Tag bg={"#00FF00"}>{eventData[0].attendedBy.length}</Tag>
+                  <Tag bg={"#00FF00"}>{eventData.attendedBy.length}</Tag>
                 </Text>
                 <Text>
                   Event created by:{" "}
-                  <Tag bg={"#00FF00"}>{createdBy[0].userName}</Tag>
+                  <Tag bg={"#00FF00"}>{createdBy.userName}</Tag>
                 </Text>
                 <Text>
                   Catergory:{" "}
-                  <Tag bg={"#00FF00"}>{currentCat[0].catergoryName}</Tag>
+                  <Tag bg={"#00FF00"}>{currentCat.catergoryName}</Tag>
                 </Text>
               </Flex>
             </CardBody>
@@ -285,7 +286,7 @@ export const EventDetailPage = ({ eventData, eventCat, users, reset }) => {
   ) : (
     <Flex flexDir={"column"} justifyContent={"center"} alignItems={"center"}>
       <Stack>
-        <React.Fragment key={eventData[0].id}>
+        <React.Fragment key={eventData.id}>
           <Card
             width={"80vw"}
             minHeight={"25em"}
@@ -331,7 +332,7 @@ export const EventDetailPage = ({ eventData, eventCat, users, reset }) => {
                   fontWeight={"bold"}
                   textAlign={"center"}
                 >
-                  {eventData[0].eventName}
+                  {eventData.eventName}
                 </CardHeader>
               </Tag>
 
@@ -342,7 +343,7 @@ export const EventDetailPage = ({ eventData, eventCat, users, reset }) => {
                   left: 0,
                   width: "100%",
                   height: "100%",
-                  backgroundImage: `url(${eventData[0].eventImage})`,
+                  backgroundImage: `url(${eventData.eventImage})`,
                   backgroundRepeat: "no-repeat",
                   backgroundPosition: "center",
                   borderRadius: "25px",
@@ -352,13 +353,13 @@ export const EventDetailPage = ({ eventData, eventCat, users, reset }) => {
               ></div>
               <Text fontWeight={"bold"}>Event details:</Text>
               <Text fontWeight={"bold"}>
-                Location: <Tag bg={"#00FF00"}>{eventData[0].eventLocation}</Tag>{" "}
+                Location: <Tag bg={"#00FF00"}>{eventData.eventLocation}</Tag>{" "}
                 When:{" "}
                 <Tag bg={"#00FF00"}>
-                  {eventData[0].eventDate.split("-").reverse().join("-")}
+                  {eventData.eventDate.split("-").reverse().join("-")}
                 </Tag>{" "}
-                From: <Tag bg={"#00FF00"}>{eventData[0].eventStartTime}</Tag>{" "}
-                Till : <Tag bg={"#00FF00"}>{eventData[0].eventEndTime}</Tag>
+                From: <Tag bg={"#00FF00"}>{eventData.eventStartTime}</Tag> Till
+                : <Tag bg={"#00FF00"}>{eventData.eventEndTime}</Tag>
               </Text>
 
               <Text fontWeight={"bold"}>Description/Agenda/Line-up:</Text>
@@ -369,21 +370,21 @@ export const EventDetailPage = ({ eventData, eventCat, users, reset }) => {
                 width={"75%"}
                 bg={"whiteAlpha.600"}
               >
-                {eventData[0].eventLongtDescr}
+                {eventData.eventLongtDescr}
               </Tag>
 
               <Flex justifyContent={"space-between"}>
                 <Text>
                   Attendees:{" "}
-                  <Tag bg={"#00FF00"}>{eventData[0].attendedBy.length}</Tag>
+                  <Tag bg={"#00FF00"}>{eventData.attendedBy.length}</Tag>
                 </Text>
                 <Text>
                   Event created by:{" "}
-                  <Tag bg={"#00FF00"}>{createdBy[0].userName}</Tag>
+                  <Tag bg={"#00FF00"}>{createdBy.userName}</Tag>
                 </Text>
                 <Text>
                   Catergory:{" "}
-                  <Tag bg={"#00FF00"}>{currentCat[0].catergoryName}</Tag>
+                  <Tag bg={"#00FF00"}>{currentCat.catergoryName}</Tag>
                 </Text>
               </Flex>
             </CardBody>
