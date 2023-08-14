@@ -229,6 +229,18 @@
   letter-spacing: 2px;
 }
 
+.message-user {
+  font-size: 2em;
+  text-align: center;
+  margin: 25px auto;
+  color: #ff0000;
+  background-color: rgba(255, 255, 0);
+  font-weight: 900;
+}
+.no-auth {
+  margin: 0 auto;
+  text-align: center;
+}
 .new-event-form-container {
   display: flex;
   flex-direction: column;
@@ -247,7 +259,7 @@
     input {
       margin: 15px;
       padding: 5px 5px 5px 10px;
-
+      color: #000000;
       border-radius: 15px;
     }
     #event-short {

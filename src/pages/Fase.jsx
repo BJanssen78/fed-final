@@ -69,7 +69,7 @@ export const Fase = () => {
             <li>
               <input type="checkbox" id="fase-3" />
               <label htmlFor="fase-3">
-                Fase 3 (5/6) <span className="task-done">{workingOn}</span>
+                Fase 3 (6/6) <span className="task-done">{checkmark}</span>
               </label>
               <ul className="sub-fase-lijst">
                 <li>
@@ -92,8 +92,10 @@ export const Fase = () => {
                   Aanmaken van user roles{" "}
                   <span className="task-done">{checkmark}</span>
                 </li>
-                <li>Testen user roles</li>{" "}
-                <span className="task-done">{workingOn} working</span>
+                <li>
+                  Testen user roles{" "}
+                  <span className="task-done">{checkmark}</span>
+                </li>
               </ul>
             </li>
             <li>
@@ -104,13 +106,16 @@ export const Fase = () => {
               <ul className="sub-fase-lijst">
                 <li>
                   Creëren formulier new events{" "}
-                  <span className="task-done">{workingOn} working</span> 81%
+                  <span className="task-done">{checkmark}</span>
                 </li>
                 <li>
                   Creëren formulier edit events{" "}
                   <span className="task-done">{checkmark}</span>
                 </li>
-                <li>Creëren formulier remove events</li>
+                <li>
+                  Creëren formulier remove events{" "}
+                  <span className="task-done">{workingOn} working</span>
+                </li>
               </ul>
             </li>
             <li>

@@ -87,6 +87,7 @@ export const EventDetailPage = ({ eventData, eventCat, users, reset }) => {
   };
 
   const createdBy = users.filter((id) => id.id === eventData[0].eventCreatedBy);
+  console.log(createdBy);
   const createdById = createdBy[0].id;
   // console.log(createdBy[0].id);
   const currentCat = eventCat.filter(

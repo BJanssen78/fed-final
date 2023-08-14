@@ -213,6 +213,22 @@
     {
       "id": 18,
       "catergoryName": "Kids"
+    },
+    {
+      "id": 19,
+      "catergoryName": "thuis"
+    },
+    {
+      "id": 20,
+      "catergoryName": "thuis"
+    },
+    {
+      "id": 21,
+      "catergoryName": "thuis"
+    },
+    {
+      "catergoryName": "thuis",
+      "id": 22
     }
   ],
   "events": [
@@ -847,6 +863,58 @@
       "catergoriesIds": [
         3
       ]
+    },
+    {
+      "id": 30,
+      "eventName": "version test",
+      "eventShortDescr": "testing this version",
+      "eventLongtDescr": "fdyhdjkd",
+      "eventDate": "2023-09-12",
+      "eventStartTime": "14:12",
+      "eventEndTime": "15:12",
+      "eventLocation": "thuis",
+      "eventCreatedBy": 8,
+      "eventImage": "https://placehold.co/200x500?text=No\nPicture+availble",
+      "attendedBy": [
+        8
+      ],
+      "catergoriesIds": [
+        19
+      ]
+    },
+    {
+      "id": 31,
+      "eventName": "version test 2",
+      "eventShortDescr": "testing this version",
+      "eventLongtDescr": "sbhdtnsgn",
+      "eventDate": "2023-09-12",
+      "eventStartTime": "14:51",
+      "eventEndTime": "15:51",
+      "eventLocation": "thuis",
+      "eventCreatedBy": 8,
+      "eventImage": "https://placehold.co/600x700?text=No\nPicture+availble",
+      "attendedBy": [
+        8
+      ],
+      "catergoriesIds": [
+        19
+      ]
+    },
+    {
+      "id": 32,
+      "eventName": "version test 3",
+      "eventShortDescr": "testing this version",
+      "eventLongtDescr": "fg",
+      "eventDate": "2023-09-12",
+      "eventStartTime": "15:00",
+      "eventEndTime": "16:00",
+      "eventLocation": "thuis",
+      "eventCreatedBy": 8,
+      "eventImage": "https://placehold.co/600x700?text=No\nPicture+availble",
+      "attendedBy": [
+        8
+      ],
+      "catergoriesIds": 19
     }
   ]
 }
