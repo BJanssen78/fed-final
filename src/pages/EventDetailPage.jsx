@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
 // import { useParams } from "react-router";
 import AuthContext from "../functions/AuthContext";
+import { useNavigate } from "react-router-dom";
 import {
   Button,
   Card,
@@ -15,8 +16,8 @@ import {
 
 export const EventDetailPage = ({ eventData, eventCat, users, reset }) => {
   const { loginStatus, loginUserId, loginUserRole } = useContext(AuthContext);
-  console.log(eventData.eventLocation);
   const [editMode, setEditMode] = useState(false);
+  const navigateBack = useNavigate();
   const [editedLocation, setEditedLocation] = useState(eventData.eventLocation);
   const [editedWhen, setEditedWhen] = useState(eventData.eventDate);
   const [editedTimeFrom, setEditedTimeFrom] = useState(
@@ -26,30 +27,29 @@ export const EventDetailPage = ({ eventData, eventCat, users, reset }) => {
   const [editedLongDesc, setEditedLongDesc] = useState(
     eventData.eventLongtDescr
   );
+  const [editedShortDesc, setEditedShortDesc] = useState(
+    eventData.eventShortDescr
+  );
+  const [errorMsg, setErrorMsg] = useState("");
 
-  useEffect(() => {}, [editMode]);
-
-  // console.log(loginStatus);
-  // console.log(loginUserId);
-  // console.log(loginUserRole);
+  useEffect(() => {}, [editMode, errorMsg]);
 
   const saveEdit = async () => {
-    const updateID = eventData[0].id;
-    // console.log(updateID);
+    const updateID = eventData.id;
 
     const updateBody = {
       id: updateID,
-      eventName: eventData[0].eventName,
-      eventShortDescr: eventData[0].eventShortDescr,
+      eventName: eventData.eventName,
+      eventShortDescr: editedShortDesc,
       eventLongtDescr: editedLongDesc,
       eventDate: editedWhen,
       eventStartTime: editedTimeFrom,
       eventEndTime: editedTimeTill,
       eventLocation: editedLocation,
-      eventCreatedBy: eventData[0].eventCreatedBy,
-      eventImage: eventData[0].eventImage,
-      attendedBy: eventData[0].attendedBy,
-      catergoriesIds: eventData[0].catergoriesIds,
+      eventCreatedBy: eventData.eventCreatedBy,
+      eventImage: eventData.eventImage,
+      attendedBy: eventData.attendedBy,
+      catergoriesIds: eventData.catergoriesIds,
     };
     const serverURL = `http://localhost:3010/events/${updateID}`;
     const sendHeaders = {
@@ -70,7 +70,38 @@ export const EventDetailPage = ({ eventData, eventCat, users, reset }) => {
     setEditMode(false);
   };
 
-  const deleteEvent = () => {};
+  const deleteEvent = async () => {
+    if (loginStatus) {
+      if (loginUserRole >= 1 && createdById === loginUserId) {
+        const sureToDelete = window.confirm(
+          "Are you sure you want to delete this event?"
+        );
+        if (sureToDelete) {
+          const serverURL = `http://localhost:3010/events/${eventData.id}`;
+          const sendHeaders = {
+            Accept: "application/json",
+            "Content-Type": "application/json",
+          };
+
+          try {
+            await fetch(serverURL, {
+              method: "DELETE",
+              headers: sendHeaders,
+            });
+          } catch (error) {
+            console.error("Error deleting post:", error);
+          }
+        } else {
+          null;
+        }
+      } else {
+        setErrorMsg("you are not authorized to delete this post");
+      }
+    } else {
+      setErrorMsg("you must login first");
+    }
+    navigateBack(-1);
+  };
 
   const handleEditMode = () => {
     if (loginStatus) {
@@ -85,12 +116,12 @@ export const EventDetailPage = ({ eventData, eventCat, users, reset }) => {
   };
 
   const createdBy = users.filter((id) => id.id === eventData.eventCreatedBy);
-  console.log(createdBy);
   const createdById = createdBy[0].id;
-  // console.log(createdBy[0].id);
   const currentCat = eventCat.filter(
-    (catergory) => catergory.id === eventData.catergoriesIds[0]
+    (catergory) => catergory.id === eventData.catergoriesIds
   );
+  console.log(currentCat);
+  console.log(eventData.catergoriesIds);
 
   return loginStatus && loginUserId === createdById ? (
     <Flex flexDir={"column"} justifyContent={"center"} alignItems={"center"}>
@@ -109,6 +140,7 @@ export const EventDetailPage = ({ eventData, eventCat, users, reset }) => {
           <Button maxWidth={"100px"} bgColor={"#00FF00"} onClick={deleteEvent}>
             Delete
           </Button>
+          <Text>{errorMsg}</Text>
         </HStack>
         <React.Fragment key={eventData.id}>
           <Card
@@ -176,6 +208,23 @@ export const EventDetailPage = ({ eventData, eventCat, users, reset }) => {
                 }}
               ></div>
               <Text fontWeight={"bold"}>Event details:</Text>
+              {editMode ? (
+                <input
+                  type="text"
+                  id="event-short-descr"
+                  name="event-short-description"
+                  placeholder={eventData.eventShortDescr}
+                  onChange={(e) => setEditedShortDesc(e.target.value)}
+                />
+              ) : (
+                <Text
+                  bgColor={"whiteAlpha.600"}
+                  borderRadius={"15px"}
+                  padding={"10px"}
+                >
+                  {eventData.eventShortDescr}
+                </Text>
+              )}
               <Text fontWeight={"bold"}>
                 Location:{" "}
                 {editMode ? (
@@ -271,11 +320,11 @@ export const EventDetailPage = ({ eventData, eventCat, users, reset }) => {
                 </Text>
                 <Text>
                   Event created by:{" "}
-                  <Tag bg={"#00FF00"}>{createdBy.userName}</Tag>
+                  <Tag bg={"#00FF00"}>{createdBy[0].userName}</Tag>
                 </Text>
                 <Text>
                   Catergory:{" "}
-                  <Tag bg={"#00FF00"}>{currentCat.catergoryName}</Tag>
+                  <Tag bg={"#00FF00"}>{currentCat[0].catergoryName}</Tag>
                 </Text>
               </Flex>
             </CardBody>
@@ -352,6 +401,13 @@ export const EventDetailPage = ({ eventData, eventCat, users, reset }) => {
                 }}
               ></div>
               <Text fontWeight={"bold"}>Event details:</Text>
+              <Text
+                bgColor={"whiteAlpha.600"}
+                borderRadius={"15px"}
+                padding={"10px"}
+              >
+                {eventData.eventShortDescr}
+              </Text>
               <Text fontWeight={"bold"}>
                 Location: <Tag bg={"#00FF00"}>{eventData.eventLocation}</Tag>{" "}
                 When:{" "}
@@ -380,11 +436,11 @@ export const EventDetailPage = ({ eventData, eventCat, users, reset }) => {
                 </Text>
                 <Text>
                   Event created by:{" "}
-                  <Tag bg={"#00FF00"}>{createdBy.userName}</Tag>
+                  <Tag bg={"#00FF00"}>{createdBy[0].userName}</Tag>
                 </Text>
                 <Text>
                   Catergory:{" "}
-                  <Tag bg={"#00FF00"}>{currentCat.catergoryName}</Tag>
+                  <Tag bg={"#00FF00"}>{currentCat[0].catergoryName}</Tag>
                 </Text>
               </Flex>
             </CardBody>

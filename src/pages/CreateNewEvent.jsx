@@ -37,8 +37,11 @@ export const CreateNewEvent = () => {
   //fetching server data and setting minimum standards
   const fetchServerData = (data) => {
     setServerData(data);
-    const createNewEventID = data.fetchedEventList.length + 1;
-    setCreateEventID(createNewEventID);
+    const createNewEventID = data.fetchedEventList.reduce(
+      (max, event) => (event.id > max ? event.id : max),
+      0
+    );
+    setCreateEventID(createNewEventID + 1);
   };
 
   useEffect(() => {

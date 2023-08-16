@@ -18,7 +18,7 @@ function App() {
     <>
       <FetchServer onDataFetched={fetchServerData} />
       <Tag position={"absolute"} margin={"5px"} zIndex={"2"}>
-        Front-end Development Final ( Fase 4/8 completed ) Version 2.04.38
+        Front-end Development Final ( Fase 4/8 completed ) Version 2.05.40
       </Tag>
       <Header loginUserName={loginUserName} />
       <Navigation loginStatus={loginStatus} />

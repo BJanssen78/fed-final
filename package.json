@@ -1,7 +1,7 @@
 {
   "name": "fed-final-2",
-  "private": true,
-  "version": "0.0.0",
+  "private": false,
+  "version": "2.04.38",
   "type": "module",
   "scripts": {
     "dev": "vite",

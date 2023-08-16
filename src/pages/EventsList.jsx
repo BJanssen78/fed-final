@@ -33,7 +33,6 @@ export const EventList = () => {
     const selectEvent = serverData.fetchedEventList.find(
       (event) => event.id === id
     );
-    console.log(selectEvent);
     setUserSelectEvent(selectEvent);
   };
 

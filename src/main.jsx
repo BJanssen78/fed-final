@@ -12,6 +12,7 @@ import {
   CreateNewUser,
   Logoff,
   CreateNewEvent,
+  Contact,
 } from "./pages/PageIndex.js";
 import { AuthProvider } from "./functions/AuthContext.jsx";
 
@@ -69,6 +70,7 @@ const router = createBrowserRouter([
       { path: "/login", element: <LoginPage /> },
       { path: "/logoff", element: <Logoff /> },
       { path: "/CreateNewUser", element: <CreateNewUser /> },
+      { path: "/contact", element: <Contact /> },
     ],
   },
 ]);

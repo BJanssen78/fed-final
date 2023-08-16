@@ -100,9 +100,7 @@ export const Fase = () => {
             </li>
             <li>
               <input type="checkbox" id="fase-4" />
-              <label htmlFor="fase-4">
-                Fase 4 (1/3) <span className="task-done">{workingOn}</span>
-              </label>
+              <label htmlFor="fase-4">Fase 4 (3/3)</label>
               <ul className="sub-fase-lijst">
                 <li>
                   Creëren formulier new events{" "}
@@ -114,7 +112,7 @@ export const Fase = () => {
                 </li>
                 <li>
                   Creëren formulier remove events{" "}
-                  <span className="task-done">{workingOn} working</span>
+                  <span className="task-done">{checkmark}</span>
                 </li>
               </ul>
             </li>
@@ -129,9 +127,14 @@ export const Fase = () => {
             </li>
             <li>
               <input type="checkbox" id="fase-6" />
-              <label htmlFor="fase-6">Fase 6 (0/2)</label>
+              <label htmlFor="fase-6">
+                Fase 6 (0/2) <span className="task-done">{workingOn}</span>
+              </label>
               <ul className="sub-fase-lijst">
-                <li>Creëren contact formulier</li>
+                <li>
+                  Creëren contact formulier{" "}
+                  <span className="task-done">{workingOn} Working</span>
+                </li>
                 <li>Testen contact formulier</li>
               </ul>
             </li>

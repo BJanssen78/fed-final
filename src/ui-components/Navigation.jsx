@@ -16,7 +16,7 @@ export const Navigation = ({ loginStatus }) => {
             <Link to="/events/">Events</Link>
           </li>
           <li>
-            <Link to="/">contact</Link>
+            <Link to="/contact">contact</Link>
           </li>
           {loginStatus ? (
             <li>
