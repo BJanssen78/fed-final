@@ -274,3 +274,63 @@
     }
   }
 }
+.contact-form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+  border: 1px solid #00ff00;
+  border-radius: 15px;
+  width: 70vw;
+  min-height: 65vh;
+  margin: 0 auto;
+
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    min-height: 50vh;
+
+    .btn-container {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      min-height: 7vh;
+      justify-content: center;
+
+      .contact-btn {
+        background-color: $bg-clr;
+        box-shadow: 0 4px $font-clr;
+        padding: 5px;
+        border-radius: 15px;
+        max-height: 40px;
+        margin: 10px;
+        width: 100px;
+        &:hover {
+          background-color: $bg-clr-hvr;
+          border: 1px solid $font-clr;
+        }
+        &:active {
+          transform: translateY(4px);
+          box-shadow: 0 1px $font-clr;
+        }
+      }
+    }
+
+    .contact-form-item {
+      width: 20vw;
+      margin: 10px;
+      border-radius: 15px;
+      padding: 10px;
+    }
+    .text-message {
+      width: 40vw;
+      min-height: 35vh;
+      padding: 10px;
+      border-radius: 15px;
+      margin: 10px;
+      color: #000000;
+    }
+  }
+}
