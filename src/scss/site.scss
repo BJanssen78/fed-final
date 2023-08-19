@@ -292,6 +292,10 @@
     justify-items: center;
     min-height: 50vh;
 
+    input {
+      color: #000000;
+    }
+
     .btn-container {
       display: flex;
       flex-direction: row;

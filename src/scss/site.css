@@ -326,6 +326,9 @@
   justify-items: center;
   min-height: 50vh;
 }
+.contact-form-container .contact-form input {
+  color: #000000;
+}
 .contact-form-container .contact-form .btn-container {
   display: flex;
   flex-direction: row;

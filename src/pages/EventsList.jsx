@@ -59,7 +59,6 @@ export const EventList = () => {
       <div className="container">
         <FetchServer onDataFetched={fetchServerData} />
 
-        {/* Switch button */}
         <Switch
           marginLeft={"10px"}
           colorScheme={showAllEvents ? "brand" : "brand.100"}
