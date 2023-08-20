@@ -20,26 +20,28 @@ export const Contact = () => {
   };
 
   const sendContactForm = async (formData) => {
-    try {
-      const formDataObj = new FormData();
-      formDataObj.append("userName", formData.userName);
-      formDataObj.append("userEmail", formData.userEmail);
-      formDataObj.append("userMessage", formData.userMessage);
+    const userNamePhp = formData.userName.toString();
+    const userEmailPhp = formData.userEmail.toString();
+    const userMessagePhp = formData.userMessage.toString();
 
+    try {
       const response = await fetch(serverAdressLocalHost, {
         method: "POST",
-        body: formDataObj,
+        body: {
+          userName: userNamePhp,
+          userEmail: userEmailPhp,
+          userMessage: userMessagePhp,
+        },
         mode: "cors",
         headers: {
-          Origin: "http://localhost:5173",
-          "Content-Type": "multipart/form-data",
+          "Content-Type": "application/x-www-form-urlencoded",
           Accept: "text/plain",
-          "Access-Control-Request-Method": "POST",
+          // "Access-Control-Request-Method": "POST",
         },
       });
 
       const responseData = await response.text();
-      console.log("Server Response:", responseData);
+      console.log(" react Server Response:", responseData);
 
       if (response.ok) {
         // Handle success, e.g., show a success message to the user
@@ -83,8 +85,8 @@ export const Contact = () => {
           name="contact-form"
           autoComplete="on"
           action="#"
-          method="POST"
-          encType="application/x-www-form-urlencoded"
+          // method="POST"
+          // encType="application/x-www-form-urlencoded"
           className="contact-form"
         >
           <input
