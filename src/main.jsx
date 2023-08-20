@@ -8,12 +8,13 @@ import {
   EventList,
   Fase,
   EventDetailPage,
-  LoginPage,
+  // LoginPage,
   CreateNewUser,
   Logoff,
   CreateNewEvent,
   Contact,
 } from "./pages/PageIndex.js";
+import { LoginPage } from "./pages/LoginPage.jsx";
 import { AuthProvider } from "./functions/AuthContext.jsx";
 
 const darkTheme = extendTheme({
