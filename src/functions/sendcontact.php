@@ -4,7 +4,7 @@ header("Access-Control-Allow-Methods: POST, GET, OPTIONS");
 header("Access-Control-Allow-Headers: Origin, Content-Type, Accept");
 
 
-if ($_SERVER["REQUEST_METHOD"] === ["POST"]){
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $username = $_POST["userName"];
     $useremail = $_POST["userEmail"];
     $usermessage = $_POST["userMessage"];

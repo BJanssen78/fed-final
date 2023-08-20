@@ -14,7 +14,7 @@ import {
   CreateNewEvent,
   Contact,
 } from "./pages/PageIndex.js";
-import { LoginPage } from "./pages/LoginPage.jsx";
+import { LoginPage } from "../src/pages/LoginPage.jsx";
 import { AuthProvider } from "./functions/AuthContext.jsx";
 
 const darkTheme = extendTheme({

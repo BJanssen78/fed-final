@@ -22,20 +22,24 @@ export const Contact = () => {
   const sendContactForm = async (formData) => {
     try {
       const formDataObj = new FormData();
-      for (const field in formData) {
-        formDataObj.append(field, formData[field]);
-      }
+      formDataObj.append("userName", formData.userName);
+      formDataObj.append("userEmail", formData.userEmail);
+      formDataObj.append("userMessage", formData.userMessage);
+
       const response = await fetch(serverAdressLocalHost, {
         method: "POST",
         body: formDataObj,
-        mode: "no-cors",
+        mode: "cors",
         headers: {
           Origin: "http://localhost:5173",
-          "Content-Type": "application/x-www-form-urlencoded",
+          "Content-Type": "multipart/form-data",
           Accept: "text/plain",
           "Access-Control-Request-Method": "POST",
         },
       });
+
+      const responseData = await response.text();
+      console.log("Server Response:", responseData);
 
       if (response.ok) {
         // Handle success, e.g., show a success message to the user
