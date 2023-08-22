@@ -1,9 +1,14 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCheck, faHelmetSafety } from "@fortawesome/free-solid-svg-icons";
+import {
+  faCheck,
+  faHelmetSafety,
+  faHourglassHalf,
+} from "@fortawesome/free-solid-svg-icons";
 
 const checkmark = <FontAwesomeIcon icon={faCheck} />;
 const workingOn = <FontAwesomeIcon icon={faHelmetSafety} />;
+const pending = <FontAwesomeIcon icon={faHourglassHalf} />;
 
 export const Fase = () => {
   return (
@@ -121,15 +126,21 @@ export const Fase = () => {
             <li>
               <input type="checkbox" id="fase-5" />
               <label htmlFor="fase-5">
-                Fase 5 (0/3) <span className="task-done">{workingOn}</span>
+                Fase 5 (2/3) <span className="task-done">{pending}</span>
               </label>
               <ul className="sub-fase-lijst">
                 <li>
                   Creëren error boundries{" "}
+                  <span className="task-done">{checkmark}</span>
+                </li>
+                <li>
+                  Creëren afhandeling errors{" "}
+                  <span className="task-done">{checkmark}</span>{" "}
+                </li>
+                <li>
+                  Testen error boundries{" "}
                   <span className="task-done">{workingOn}Working</span>
                 </li>
-                <li>Creëren afhandeling errors</li>
-                <li>Testen error boundries</li>
               </ul>
             </li>
             <li>
@@ -154,11 +165,23 @@ export const Fase = () => {
             </li>
             <li>
               <input type="checkbox" id="fase-7" />
-              <label htmlFor="fase-7">Fase 7 (0/3)</label>
+              <label htmlFor="fase-7">
+                Fase 7 (0/3) <span className="task-done">{workingOn}</span>{" "}
+                <span className="task-done">{pending}</span>
+              </label>
               <ul className="sub-fase-lijst">
-                <li>Produceren uiteindelijke product</li>
-                <li>Uploaden van site/app</li>
-                <li>Indienen van product en code bij de Academy</li>
+                <li>
+                  Produceren uiteindelijke product{" "}
+                  <span className="task-done">{workingOn}Working</span>
+                </li>
+                <li>
+                  Uploaden van site/app{" "}
+                  <span className="task-done">{pending}Pending</span>
+                </li>
+                <li>
+                  Indienen van product en code bij de Academy{" "}
+                  <span className="task-done">{pending}Pending</span>
+                </li>
               </ul>
             </li>
             <li>
