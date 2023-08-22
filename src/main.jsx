@@ -8,14 +8,13 @@ import {
   EventList,
   Fase,
   EventDetailPage,
-  // LoginPage,
+  LoginPage,
   CreateNewUser,
   Logoff,
   CreateNewEvent,
   Contact,
   VisitorMessages,
 } from "./pages/PageIndex.js";
-import { LoginPage } from "../src/pages/LoginPage.jsx";
 import { AuthProvider } from "./functions/AuthContext.jsx";
 import ErrorBoundary from "./ui-components/ErrorBoundary.jsx";
 

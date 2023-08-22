@@ -2,6 +2,7 @@
   "name": "fed-final-2",
   "private": false,
   "version": "2.04.38",
+  "author": "Ben Janssen",
   "type": "module",
   "scripts": {
     "dev": "vite",
