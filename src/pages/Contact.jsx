@@ -32,7 +32,6 @@ export const Contact = () => {
     addedZeroToHours +
     ":" +
     addedZeroToMinutes;
-  console.log(newDate);
 
   // const serverURL = "../src/database/database.json";
   const serverURL = "http://localhost:3010/userMessages";

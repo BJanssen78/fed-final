@@ -46,7 +46,7 @@ export const VisitorMessages = () => {
   const sortingMessages = messageBoard
     .slice()
     .sort((a, b) => new Date(a.dateTime) - new Date(b.dateTime));
-  console.log(messageBoard);
+
   return (
     <>
       <Flex flexDir={"column"} justifyContent={"center"} alignItems={"center"}>

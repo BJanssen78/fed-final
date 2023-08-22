@@ -17,6 +17,7 @@ import {
 } from "./pages/PageIndex.js";
 import { LoginPage } from "../src/pages/LoginPage.jsx";
 import { AuthProvider } from "./functions/AuthContext.jsx";
+import ErrorBoundary from "./ui-components/ErrorBoundary.jsx";
 
 const darkTheme = extendTheme({
   styles: {
@@ -101,9 +102,11 @@ const Main = () => {
             colorScheme="brand" // Use the custom color scheme
           />
         </VStack>
-        <AuthProvider>
-          <RouterProvider router={router} />
-        </AuthProvider>
+        <ErrorBoundary>
+          <AuthProvider>
+            <RouterProvider router={router} />
+          </AuthProvider>
+        </ErrorBoundary>
       </ChakraProvider>
     </React.StrictMode>
   );
