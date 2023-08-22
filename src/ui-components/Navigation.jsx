@@ -16,7 +16,10 @@ export const Navigation = ({ loginStatus }) => {
             <Link to="/events/">Events</Link>
           </li>
           <li>
-            <Link to="/contact">contact</Link>
+            <Link to="/contact">Contact</Link>
+          </li>
+          <li>
+            <Link to="/Messages">Messages</Link>
           </li>
           {loginStatus ? (
             <li>

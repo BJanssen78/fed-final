@@ -24,7 +24,7 @@ export const CreateNewUser = () => {
     const userId = serverData.fetchedUserList.length + 1;
     if (password === confirmPassword) {
       const newUser = {
-        userID: userId,
+        id: userId,
         userName: username,
         userPass: password,
         userEmail: "user@server.nl",

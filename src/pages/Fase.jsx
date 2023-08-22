@@ -120,9 +120,14 @@ export const Fase = () => {
             </li>
             <li>
               <input type="checkbox" id="fase-5" />
-              <label htmlFor="fase-5">Fase 5 (0/3)</label>
+              <label htmlFor="fase-5">
+                Fase 5 (0/3) <span className="task-done">{workingOn}</span>
+              </label>
               <ul className="sub-fase-lijst">
-                <li>Creëren error boundries</li>
+                <li>
+                  Creëren error boundries{" "}
+                  <span className="task-done">{workingOn}Working</span>
+                </li>
                 <li>Creëren afhandeling errors</li>
                 <li>Testen error boundries</li>
               </ul>
@@ -130,16 +135,20 @@ export const Fase = () => {
             <li>
               <input type="checkbox" id="fase-6" />
               <label htmlFor="fase-6">
-                Fase 6 (0/2) <span className="task-done">{workingOn}</span>
+                Fase 6 (3/3) <span className="task-done">{checkmark}</span>
               </label>
               <ul className="sub-fase-lijst">
                 <li>
                   Creëren contact formulier{" "}
-                  <span className="task-done">{checkmark} Working</span>
+                  <span className="task-done">{checkmark}</span>
                 </li>
                 <li>
                   Testen contact formulier{" "}
-                  <span className="task-done">{workingOn} Working</span>
+                  <span className="task-done">{checkmark}</span>
+                </li>
+                <li>
+                  Creëren messageboard{" "}
+                  <span className="task-done">{checkmark}</span>
                 </li>
               </ul>
             </li>

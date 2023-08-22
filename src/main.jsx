@@ -13,6 +13,7 @@ import {
   Logoff,
   CreateNewEvent,
   Contact,
+  VisitorMessages,
 } from "./pages/PageIndex.js";
 import { LoginPage } from "../src/pages/LoginPage.jsx";
 import { AuthProvider } from "./functions/AuthContext.jsx";
@@ -72,6 +73,7 @@ const router = createBrowserRouter([
       { path: "/logoff", element: <Logoff /> },
       { path: "/CreateNewUser", element: <CreateNewUser /> },
       { path: "/contact", element: <Contact /> },
+      { path: "/Messages", element: <VisitorMessages /> },
     ],
   },
 ]);

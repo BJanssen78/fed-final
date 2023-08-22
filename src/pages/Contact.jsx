@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Switch } from "@chakra-ui/react";
 
 export const Contact = () => {
@@ -7,9 +7,58 @@ export const Contact = () => {
   const [userEmail, setUserEmail] = useState("");
   const [userMessage, setUserMessage] = useState("");
   const [userAnonymous, setUserAnonymous] = useState(false);
+  const [newMessageID, setNewMessageID] = useState(null);
 
-  // const serverAdressLocalHost = "http://localhost:3001/sendcontact.php";
-  const serverAdressLocalHost = "../src/functions/sendcontact.php";
+  useEffect(() => {}, [newMessageID]);
+
+  const currentDate = new Date();
+  const currentYear = currentDate.getFullYear();
+  const currentMonth = currentDate.getMonth() + 1;
+  const addedZeroToMonth = currentMonth.toString().padStart(2, "0");
+  const currentDay = currentDate.getDate();
+  const addedZeroToDay = currentDay.toString().padStart(2, "0");
+  const currentHours = currentDate.getHours();
+  const addedZeroToHours = currentHours.toString().padStart(2, "0");
+  const currentMinutes = currentDate.getMinutes();
+  const addedZeroToMinutes = currentMinutes.toString().padStart(2, "0");
+
+  const newDate =
+    currentYear +
+    "-" +
+    addedZeroToMonth +
+    "-" +
+    addedZeroToDay +
+    " " +
+    addedZeroToHours +
+    ":" +
+    addedZeroToMinutes;
+  console.log(newDate);
+
+  // const serverURL = "../src/database/database.json";
+  const serverURL = "http://localhost:3010/userMessages";
+
+  const sendHeaders = {
+    Accept: "application/json",
+    "Content-Type": "application/json",
+  };
+
+  const getServerMessages = async () => {
+    try {
+      const messagesFromServer = await fetch(serverURL, {
+        method: "GET",
+        headers: sendHeaders,
+      })
+        .then((response) => response.json())
+        .then((response) => {
+          setNewMessageID(response.length + 1);
+        });
+    } catch (error) {
+      console.log("contact form errors: ", error);
+      throw error;
+    }
+  };
+
+  getServerMessages();
 
   //setting annymous values
   const anonymousName = "John Doe";
@@ -20,38 +69,19 @@ export const Contact = () => {
   };
 
   const sendContactForm = async (formData) => {
-    const userNamePhp = formData.userName.toString();
-    const userEmailPhp = formData.userEmail.toString();
-    const userMessagePhp = formData.userMessage.toString();
-
     try {
-      const response = await fetch(serverAdressLocalHost, {
+      const response = await fetch(serverURL, {
         method: "POST",
-        body: {
-          userName: userNamePhp,
-          userEmail: userEmailPhp,
-          userMessage: userMessagePhp,
-        },
-        mode: "cors",
-        headers: {
-          "Content-Type": "application/x-www-form-urlencoded",
-          Accept: "text/plain",
-          // "Access-Control-Request-Method": "POST",
-        },
+        body: JSON.stringify(formData),
+        headers: sendHeaders,
       });
 
-      const responseData = await response.text();
-      console.log(" react Server Response:", responseData);
-
       if (response.ok) {
-        // Handle success, e.g., show a success message to the user
         console.log("react Form submitted successfully!");
       } else {
-        // Handle error, e.g., show an error message to the user
         console.error("react Form submission failed.");
       }
     } catch (error) {
-      // Handle network or other errors
       console.error("react An error occurred:", error);
     }
   };
@@ -60,17 +90,21 @@ export const Contact = () => {
     e.preventDefault();
     if (userAnonymous) {
       const formData = {
-        userName: anonymousName,
-        userEmail: anonymousEmail,
-        userMessage: userMessage,
+        id: newMessageID,
+        dateTime: newDate,
+        message: userMessage,
+        messageBy: anonymousName,
+        messageByEmail: anonymousEmail,
       };
       sendContactForm(formData);
       console.log(formData);
     } else {
       const formData = {
-        userName: userFirstName + " " + userLastName,
-        userEmail: userEmail,
-        userMessage: userMessage,
+        id: newMessageID,
+        dateTime: newDate,
+        message: userMessage,
+        messageBy: userFirstName + " " + userLastName,
+        messageByEmail: userEmail,
       };
       sendContactForm(formData);
       console.log(formData);
@@ -85,8 +119,6 @@ export const Contact = () => {
           name="contact-form"
           autoComplete="on"
           action="#"
-          // method="POST"
-          // encType="application/x-www-form-urlencoded"
           className="contact-form"
         >
           <input
