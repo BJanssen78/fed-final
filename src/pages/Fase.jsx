@@ -172,7 +172,7 @@ export const Fase = () => {
               <ul className="sub-fase-lijst">
                 <li>
                   Produceren uiteindelijke product{" "}
-                  <span className="task-done">{workingOn}Working</span>
+                  <span className="task-done">{checkmark}</span>
                 </li>
                 <li>
                   Uploaden van site/app{" "}
