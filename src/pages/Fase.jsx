@@ -126,7 +126,8 @@ export const Fase = () => {
             <li>
               <input type="checkbox" id="fase-5" />
               <label htmlFor="fase-5">
-                Fase 5 (2/3) <span className="task-done">{pending}</span>
+                Fase 5 (2/3) <span className="task-done">{pending}</span>{" "}
+                <span className="task-done">{checkmark}</span>
               </label>
               <ul className="sub-fase-lijst">
                 <li>
@@ -166,8 +167,7 @@ export const Fase = () => {
             <li>
               <input type="checkbox" id="fase-7" />
               <label htmlFor="fase-7">
-                Fase 7 (0/3) <span className="task-done">{workingOn}</span>{" "}
-                <span className="task-done">{pending}</span>
+                Fase 7 (0/3) <span className="task-done">{checkmark}</span>
               </label>
               <ul className="sub-fase-lijst">
                 <li>
@@ -176,11 +176,11 @@ export const Fase = () => {
                 </li>
                 <li>
                   Uploaden van site/app{" "}
-                  <span className="task-done">{pending}Pending</span>
+                  <span className="task-done">{checkmark}</span>
                 </li>
                 <li>
                   Indienen van product en code bij de Academy{" "}
-                  <span className="task-done">{pending}Pending</span>
+                  <span className="task-done">{checkmark}</span>
                 </li>
               </ul>
             </li>

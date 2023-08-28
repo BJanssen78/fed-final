@@ -436,11 +436,11 @@ export const EventDetailPage = ({ eventData, eventCat, users, reset }) => {
                 </Text>
                 <Text>
                   Event created by:{" "}
-                  <Tag bg={"#00FF00"}>{createdBy[0].userName}</Tag>
+                  <Tag bg={"#00FF00"}>{createdBy.userName}</Tag>
                 </Text>
                 <Text>
                   Catergory:{" "}
-                  <Tag bg={"#00FF00"}>{currentCat[0].catergoryName}</Tag>
+                  <Tag bg={"#00FF00"}>{currentCat.catergoryName}</Tag>
                 </Text>
               </Flex>
             </CardBody>

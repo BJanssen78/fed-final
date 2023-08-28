@@ -12,8 +12,8 @@ import {
 
 export const VisitorMessages = () => {
   const [messageBoard, setMessageBoard] = useState([]);
-  // const serverURL = "../src/database/database.json";
-  const serverURL = "http://localhost:3010/userMessages";
+  const serverURL = "../src/database/database.json";
+  // const serverURL = "http://localhost:3010/userMessages";
 
   const sendHeaders = {
     Accept: "application/json",
@@ -31,7 +31,7 @@ export const VisitorMessages = () => {
         if (response.ok) {
           const responseData = await response.json();
           const messages = Object.values(responseData);
-          setMessageBoard(messages);
+          setMessageBoard(messages[4]);
         } else {
           console.error("Failed to fetch messages:", response.statusText);
         }
@@ -46,6 +46,8 @@ export const VisitorMessages = () => {
   const sortingMessages = messageBoard
     .slice()
     .sort((a, b) => new Date(a.dateTime) - new Date(b.dateTime));
+
+  console.log(messageBoard);
 
   return (
     <>
