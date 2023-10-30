@@ -87,6 +87,7 @@ export const Contact = () => {
 
   const createContactForm = (e) => {
     e.preventDefault();
+    getServerMessages();
     if (userAnonymous) {
       const formData = {
         id: newMessageID,
